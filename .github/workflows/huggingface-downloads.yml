@@ -1,0 +1,38 @@
+name: Refresh Hugging Face downloads
+
+on:
+  schedule:
+    - cron: '3-58/5 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'metrics/huggingface-repositories.json'
+      - 'scripts/refresh_hf_downloads.py'
+      - 'tests/test_refresh_hf_downloads.py'
+      - '.github/workflows/huggingface-downloads.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: huggingface-downloads
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'ZJU-OmniAI/.github'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Verify aggregation and failure behavior
+        run: python3 -m unittest discover -s tests -v
+      - name: Fetch and publish all-time totals
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/refresh_hf_downloads.py --publish
