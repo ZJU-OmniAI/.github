@@ -1,17 +1,17 @@
 {
   "groups": {
     "embodied-omni": {
-      "datasets": 45638,
+      "datasets": 45829,
       "models": 79,
-      "total": 45717
+      "total": 45908
     }
   },
   "metric": "downloadsAllTime",
   "projects": {
     "embodied-memory-bench": {
-      "datasets": 27545,
+      "datasets": 27727,
       "models": 0,
-      "total": 27545
+      "total": 27727
     },
     "embodied-navigator": {
       "datasets": 0,
@@ -19,57 +19,57 @@
       "total": 79
     },
     "embodied-reasoner": {
-      "datasets": 18093,
+      "datasets": 18102,
       "models": 0,
-      "total": 18093
+      "total": 18102
     },
     "gft": {
-      "datasets": 365,
+      "datasets": 367,
       "models": 0,
-      "total": 365
+      "total": 367
     },
     "omnex-vl": {
-      "datasets": 261,
+      "datasets": 262,
       "models": 57,
-      "total": 318
+      "total": 319
     },
     "provise": {
-      "datasets": 1684,
+      "datasets": 1696,
       "models": 0,
-      "total": 1684
+      "total": 1696
     },
     "spatial-interactor": {
-      "datasets": 1315,
-      "models": 703,
-      "total": 2018
+      "datasets": 1327,
+      "models": 711,
+      "total": 2038
     },
     "verirl": {
       "datasets": 752,
-      "models": 114,
-      "total": 866
+      "models": 115,
+      "total": 867
     }
   },
   "resources": {
-    "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 365,
-    "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 261,
-    "dataset:kagakouko/LSI-108K": 1315,
-    "dataset:lzLiang/EmbodiedMemoryBench": 27545,
+    "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 367,
+    "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 262,
+    "dataset:kagakouko/LSI-108K": 1327,
+    "dataset:lzLiang/EmbodiedMemoryBench": 27727,
     "dataset:tttboy/Veribench-53K": 752,
-    "dataset:wx91726/SpatialGen-Bench": 1684,
-    "dataset:zwq2018/embodied_reasoner": 18093,
+    "dataset:wx91726/SpatialGen-Bench": 1696,
+    "dataset:zwq2018/embodied_reasoner": 18102,
     "model:OmniAI-ZJU/OMNEX-VL": 57,
     "model:UnderTides/Embodied-Navigator-7B-GRPO": 79,
     "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-3B": 144,
-    "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-7B": 193,
-    "model:kagakouko/Spatial-Interactor-Qwen3-VL-4B": 195,
-    "model:kagakouko/Spatial-Interactor-Qwen3-VL-8B": 171,
-    "model:tttboy/Verirl-CodeQwen2.5": 114
+    "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-7B": 194,
+    "model:kagakouko/Spatial-Interactor-Qwen3-VL-4B": 199,
+    "model:kagakouko/Spatial-Interactor-Qwen3-VL-8B": 174,
+    "model:tttboy/Verirl-CodeQwen2.5": 115
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 50015,
-    "models": 953,
-    "total": 50968
+    "datasets": 50233,
+    "models": 962,
+    "total": 51195
   },
-  "updatedAt": "2026-10-09T17:14:04+00:00"
+  "updatedAt": "2026-10-10T13:55:39+00:00"
 }
