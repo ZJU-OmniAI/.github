@@ -1,9 +1,9 @@
 {
   "groups": {
     "embodied-omni": {
-      "datasets": 50858,
+      "datasets": 50952,
       "models": 79,
-      "total": 50937
+      "total": 51031
     }
   },
   "metric": "downloadsAllTime",
@@ -19,14 +19,14 @@
       "total": 79
     },
     "embodied-reasoner": {
-      "datasets": 18659,
+      "datasets": 18753,
       "models": 0,
-      "total": 18659
+      "total": 18753
     },
     "gft": {
-      "datasets": 388,
+      "datasets": 393,
       "models": 0,
-      "total": 388
+      "total": 393
     },
     "omnex-vl": {
       "datasets": 270,
@@ -34,42 +34,42 @@
       "total": 329
     },
     "provise": {
-      "datasets": 1751,
+      "datasets": 1753,
       "models": 0,
-      "total": 1751
+      "total": 1753
     },
     "spatial-interactor": {
-      "datasets": 1718,
-      "models": 770,
-      "total": 2488
+      "datasets": 1727,
+      "models": 772,
+      "total": 2499
     },
     "verirl": {
-      "datasets": 754,
+      "datasets": 755,
       "models": 118,
-      "total": 872
+      "total": 873
     }
   },
   "resources": {
-    "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 388,
+    "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 393,
     "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 270,
-    "dataset:kagakouko/LSI-108K": 1718,
+    "dataset:kagakouko/LSI-108K": 1727,
     "dataset:lzLiang/EmbodiedMemoryBench": 32199,
-    "dataset:tttboy/Veribench-53K": 754,
-    "dataset:wx91726/SpatialGen-Bench": 1751,
-    "dataset:zwq2018/embodied_reasoner": 18659,
+    "dataset:tttboy/Veribench-53K": 755,
+    "dataset:wx91726/SpatialGen-Bench": 1753,
+    "dataset:zwq2018/embodied_reasoner": 18753,
     "model:OmniAI-ZJU/OMNEX-VL": 59,
     "model:UnderTides/Embodied-Navigator-7B-GRPO": 79,
     "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-3B": 152,
     "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-7B": 208,
-    "model:kagakouko/Spatial-Interactor-Qwen3-VL-4B": 221,
+    "model:kagakouko/Spatial-Interactor-Qwen3-VL-4B": 223,
     "model:kagakouko/Spatial-Interactor-Qwen3-VL-8B": 189,
     "model:tttboy/Verirl-CodeQwen2.5": 118
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 55739,
-    "models": 1026,
-    "total": 56765
+    "datasets": 55850,
+    "models": 1028,
+    "total": 56878
   },
-  "updatedAt": "2026-10-17T13:16:29+00:00"
+  "updatedAt": "2026-10-18T09:59:36+00:00"
 }
