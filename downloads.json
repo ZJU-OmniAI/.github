@@ -34,9 +34,9 @@
       "total": 337
     },
     "provise": {
-      "datasets": 1864,
+      "datasets": 1916,
       "models": 0,
-      "total": 1864
+      "total": 1916
     },
     "spatial-interactor": {
       "datasets": 2093,
@@ -55,7 +55,7 @@
     "dataset:kagakouko/LSI-108K": 2093,
     "dataset:lzLiang/EmbodiedMemoryBench": 33600,
     "dataset:tttboy/Veribench-53K": 771,
-    "dataset:wx91726/SpatialGen-Bench": 1864,
+    "dataset:wx91726/SpatialGen-Bench": 1916,
     "dataset:zwq2018/embodied_reasoner": 19499,
     "model:OmniAI-ZJU/OMNEX-VL": 59,
     "model:UnderTides/Embodied-Navigator-7B-GRPO": 79,
@@ -67,9 +67,9 @@
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 58507,
+    "datasets": 58559,
     "models": 1067,
-    "total": 59574
+    "total": 59626
   },
-  "updatedAt": "2026-10-22T10:35:18+00:00"
+  "updatedAt": "2026-10-22T15:39:14+00:00"
 }
