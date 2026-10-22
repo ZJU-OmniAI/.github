@@ -38,6 +38,11 @@
       "models": 0,
       "total": 1916
     },
+    "scene-designer": {
+      "datasets": 188,
+      "models": 83,
+      "total": 271
+    },
     "spatial-interactor": {
       "datasets": 2093,
       "models": 808,
@@ -47,29 +52,45 @@
       "datasets": 771,
       "models": 121,
       "total": 892
+    },
+    "vla-delta": {
+      "datasets": 0,
+      "models": 53,
+      "total": 53
+    },
+    "vla-rolling": {
+      "datasets": 0,
+      "models": 0,
+      "total": 0
     }
   },
   "resources": {
     "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 402,
     "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 278,
+    "dataset:XuanyuLiu/Scene-OTC-Bench": 188,
     "dataset:kagakouko/LSI-108K": 2093,
     "dataset:lzLiang/EmbodiedMemoryBench": 33600,
     "dataset:tttboy/Veribench-53K": 771,
     "dataset:wx91726/SpatialGen-Bench": 1916,
     "dataset:zwq2018/embodied_reasoner": 19499,
+    "model:Chenbao77/VLA-Rolling": 0,
     "model:OmniAI-ZJU/OMNEX-VL": 59,
     "model:UnderTides/Embodied-Navigator-7B-GRPO": 79,
+    "model:XuanyuLiu/Scene-Builder-Qwen3-VL-8B-Instruct": 83,
     "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-3B": 157,
     "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-7B": 214,
     "model:kagakouko/Spatial-Interactor-Qwen3-VL-4B": 240,
     "model:kagakouko/Spatial-Interactor-Qwen3-VL-8B": 197,
+    "model:t0rn0d0/VLA-Delta-base": 19,
+    "model:t0rn0d0/VLA-Delta-libero": 19,
+    "model:t0rn0d0/VLA-Delta-robotwin": 15,
     "model:tttboy/Verirl-CodeQwen2.5": 121
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 58559,
-    "models": 1067,
-    "total": 59626
+    "datasets": 58747,
+    "models": 1203,
+    "total": 59950
   },
-  "updatedAt": "2026-10-22T15:39:14+00:00"
+  "updatedAt": "2026-10-22T18:37:39+00:00"
 }
