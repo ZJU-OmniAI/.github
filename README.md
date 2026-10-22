@@ -27,4 +27,6 @@ The six directions are an editorial organization of the group's public work: Emb
 
 The current world-model entry is a reading resource. GFT studies LLM reasoning post-training; MGAP and OMNEX-VL study multimodal grounding/hallucination. They are placed in their respective learning and multimodal directions.
 
-Source verification date: 2026-10-03. Project repositories and paper links are provided in the profile next to the corresponding work.
+VLA-Δ (action learning) and VLA-Rolling (efficient action-chunk inference) sit with VLA-Corrector under Embodied Cerebellum. Scene-Designer (agentic 3D scene generation) sits under Spatial Intelligence. DTCA (RL for diffusion language models) sits under Reasoning & RL; it has no arXiv version yet, so it links to the PDF on its project page and is labeled `Preprint 2026`.
+
+Source verification date: 2026-10-23. Project repositories and paper links are provided in the profile next to the corresponding work.

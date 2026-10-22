@@ -71,6 +71,36 @@
         "type": "dataset",
         "id": "tttboy/Veribench-53K"
       }
+    ],
+    "vla-delta": [
+      {
+        "type": "model",
+        "id": "t0rn0d0/VLA-Delta-base"
+      },
+      {
+        "type": "model",
+        "id": "t0rn0d0/VLA-Delta-libero"
+      },
+      {
+        "type": "model",
+        "id": "t0rn0d0/VLA-Delta-robotwin"
+      }
+    ],
+    "vla-rolling": [
+      {
+        "type": "model",
+        "id": "Chenbao77/VLA-Rolling"
+      }
+    ],
+    "scene-designer": [
+      {
+        "type": "model",
+        "id": "XuanyuLiu/Scene-Builder-Qwen3-VL-8B-Instruct"
+      },
+      {
+        "type": "dataset",
+        "id": "XuanyuLiu/Scene-OTC-Bench"
+      }
     ]
   },
   "groups": {
