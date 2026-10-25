@@ -1,17 +1,17 @@
 {
   "groups": {
     "embodied-omni": {
-      "datasets": 54300,
+      "datasets": 54876,
       "models": 79,
-      "total": 54379
+      "total": 54955
     }
   },
   "metric": "downloadsAllTime",
   "projects": {
     "embodied-memory-bench": {
-      "datasets": 34568,
+      "datasets": 35144,
       "models": 0,
-      "total": 34568
+      "total": 35144
     },
     "embodied-navigator": {
       "datasets": 0,
@@ -29,24 +29,24 @@
       "total": 402
     },
     "omnex-vl": {
-      "datasets": 287,
+      "datasets": 296,
       "models": 59,
-      "total": 346
+      "total": 355
     },
     "provise": {
-      "datasets": 1955,
+      "datasets": 1975,
       "models": 0,
-      "total": 1955
+      "total": 1975
     },
     "scene-designer": {
-      "datasets": 239,
+      "datasets": 241,
       "models": 99,
-      "total": 338
+      "total": 340
     },
     "spatial-interactor": {
-      "datasets": 2150,
+      "datasets": 2210,
       "models": 836,
-      "total": 2986
+      "total": 3046
     },
     "verirl": {
       "datasets": 771,
@@ -66,12 +66,12 @@
   },
   "resources": {
     "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 402,
-    "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 287,
-    "dataset:XuanyuLiu/Scene-OTC-Bench": 239,
-    "dataset:kagakouko/LSI-108K": 2150,
-    "dataset:lzLiang/EmbodiedMemoryBench": 34568,
+    "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 296,
+    "dataset:XuanyuLiu/Scene-OTC-Bench": 241,
+    "dataset:kagakouko/LSI-108K": 2210,
+    "dataset:lzLiang/EmbodiedMemoryBench": 35144,
     "dataset:tttboy/Veribench-53K": 771,
-    "dataset:wx91726/SpatialGen-Bench": 1955,
+    "dataset:wx91726/SpatialGen-Bench": 1975,
     "dataset:zwq2018/embodied_reasoner": 19732,
     "model:Chenbao77/VLA-Rolling": 0,
     "model:OmniAI-ZJU/OMNEX-VL": 59,
@@ -88,9 +88,9 @@
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 60104,
+    "datasets": 60771,
     "models": 1257,
-    "total": 61361
+    "total": 62028
   },
-  "updatedAt": "2026-10-25T09:43:04+00:00"
+  "updatedAt": "2026-10-25T13:58:01+00:00"
 }
