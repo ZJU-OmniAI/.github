@@ -34,19 +34,19 @@
       "total": 356
     },
     "provise": {
-      "datasets": 1975,
+      "datasets": 2005,
       "models": 0,
-      "total": 1975
+      "total": 2005
     },
     "scene-designer": {
-      "datasets": 241,
+      "datasets": 249,
       "models": 100,
-      "total": 341
+      "total": 349
     },
     "spatial-interactor": {
-      "datasets": 2210,
+      "datasets": 2257,
       "models": 850,
-      "total": 3060
+      "total": 3107
     },
     "verirl": {
       "datasets": 771,
@@ -67,11 +67,11 @@
   "resources": {
     "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 404,
     "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 297,
-    "dataset:XuanyuLiu/Scene-OTC-Bench": 241,
-    "dataset:kagakouko/LSI-108K": 2210,
+    "dataset:XuanyuLiu/Scene-OTC-Bench": 249,
+    "dataset:kagakouko/LSI-108K": 2257,
     "dataset:lzLiang/EmbodiedMemoryBench": 35300,
     "dataset:tttboy/Veribench-53K": 771,
-    "dataset:wx91726/SpatialGen-Bench": 1975,
+    "dataset:wx91726/SpatialGen-Bench": 2005,
     "dataset:zwq2018/embodied_reasoner": 19770,
     "model:Chenbao77/VLA-Rolling": 0,
     "model:OmniAI-ZJU/OMNEX-VL": 59,
@@ -88,9 +88,9 @@
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 60968,
+    "datasets": 61053,
     "models": 1273,
-    "total": 62241
+    "total": 62326
   },
-  "updatedAt": "2026-10-26T11:21:20+00:00"
+  "updatedAt": "2026-10-26T17:30:44+00:00"
 }
