@@ -36,14 +36,11 @@ Automatically updated GitHub stars and all-time Hugging Face download counts. Hu
 
 | Month | Media | Project | Coverage |
 | :--- | :--- | :--- | :--- |
-| 2026.10 | 新智元 | [EmbodiedMemory-Bench](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_memory) | [具身智能体长程记忆：看见不等于记住，浙大提出具身记忆基准](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652735627&idx=3&sn=2195898b4588173b111e6ffc13732156) · [智源社区转载](https://hub.baai.ac.cn/view/58804) |
+| 2026.10 | 新智元 | [EmbodiedMemory-Bench](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_memory) | [具身智能体长程记忆：看见不等于记住，浙大提出具身记忆基准](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652735627&idx=3&sn=2195898b4588173b111e6ffc13732156) |
 | 2026.10 | 青稞 AI | [Spatial-Interactor](https://github.com/ZJU-OmniAI/Spatial-Interactor) | [让大模型从运动和交互中学习空间推理，理解环境变化。浙大团队最新提出Spatial-Interactor](https://www.qingkeai.online/blog/Spatial-Interactor) |
 | 2026.09 | 机器之心 | [VLA-Corrector](https://github.com/ZJU-OmniAI/vla-corrector) | [VLA开环盲区，终于被堵上了：40M Corrector让机器人边做边纠错](https://mp.weixin.qq.com/s/rfSPbtc2_fRpggXeBPPC3Q) |
-| 2026.08 | 机器之心（AI TNT 转载） | [ProVisE](https://github.com/ZJU-OmniAI/ProVisE) | [让生成式模型「画」出空间智能，而非强迫LLM输出「坐标」! 浙大提出Agentic空间认知评估框架](https://m.aitntnews.com/newDetail.html?newId=28080) |
+| 2026.08 | 机器之心 | [ProVisE](https://github.com/ZJU-OmniAI/ProVisE) | [让生成式模型「画」出空间智能，而非强迫LLM输出「坐标」! 浙大提出Agentic空间认知评估框架](https://www.jiqizhixin.com/articles/2026-08-08-4) |
 | 2026.07 | 具身智能之心 | [VLA-Corrector](https://github.com/ZJU-OmniAI/vla-corrector) | [40M 补上开环盲区！VLA-Corrector 让 VLA 学会发现并纠错（浙大&达摩院）](https://mp.weixin.qq.com/s?__biz=MzkyMDY0OTc1NA==&mid=2247540637&idx=1&sn=0f177736092e21a930e0d9dc40a2a583) |
-| 2024.03 | 量子位 | [Agent-Pro](https://github.com/ZJU-OmniAI/Agent-Pro) | [浙大&中科院让Agent学会自我进化，玩德州扑克心机尽显](https://www.qbitai.com/2024/03/127294.html) |
-| 2024.03 | 将门创投 | [Agent-Pro](https://github.com/ZJU-OmniAI/Agent-Pro) | [Agent-Pro 专题报道](https://mp.weixin.qq.com/s/gD4pZc6pvX8f_62uiPJacg) |
-| 2023.06 | 机器之心（新浪转载） | [Data-Copilot](https://github.com/ZJU-OmniAI/Data-Copilot) | [大语言模型做数据助手，浙大Data-Copilot高效调用、处理、可视化数据](https://finance.sina.cn/tech/2023-06-26/detail-imyyquis6140492.d.html?from=wap) |
 
 ## Research Directions
 
