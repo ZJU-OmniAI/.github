@@ -34,6 +34,13 @@ Automatically updated GitHub stars and all-time Hugging Face download counts. Hu
 | **2026.10** | [**VLA-Δ**](https://github.com/ZJU-OmniAI/VLA-Delta) | A VLA that learns how the physical state changes, not only which action to take; **98.4%** average success on LIBERO and **90.06%** on RoboTwin 2.0 (Clean). [Paper](https://arxiv.org/abs/2610.21306) · [Project](https://zju-omniai.github.io/VLA-Delta/) · [![models downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FZJU-OmniAI%2F.github%2Fhf-download-stats%2Fdownloads.json&query=%24.projects%5B%22vla-delta%22%5D.models&label=models+downloads&color=FFD21E&logo=huggingface&cacheSeconds=300)](https://raw.githubusercontent.com/ZJU-OmniAI/.github/hf-download-stats/downloads.json) · [![VLA-Delta GitHub stars](https://img.shields.io/github/stars/ZJU-OmniAI/VLA-Delta?style=flat&logo=github&label=stars&color=181717&cacheSeconds=300)](https://github.com/ZJU-OmniAI/VLA-Delta/stargazers) |
 | **2026.09** | [**EmbodiedMemory-Bench**](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_memory) | A benchmark for memory in long-horizon embodied tasks, with **2,554 executable episodes**. [Paper](https://arxiv.org/abs/2609.28236) · [![dataset downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FlzLiang%2FEmbodiedMemoryBench%3Fexpand%255B%255D%3DdownloadsAllTime&query=%24.downloadsAllTime&label=dataset+downloads&color=FFD21E&logo=huggingface&cacheSeconds=300)](https://huggingface.co/datasets/lzLiang/EmbodiedMemoryBench) · [![Embodied-Omni GitHub stars](https://img.shields.io/github/stars/ZJU-OmniAI/Embodied-Omni?style=flat&logo=github&label=Embodied-Omni%20stars&color=181717&cacheSeconds=300)](https://github.com/ZJU-OmniAI/Embodied-Omni/stargazers) |
 
+## Media Coverage · 媒体报道
+
+| Month | Media | Project | Coverage |
+| :--- | :--- | :--- | :--- |
+| 2026.10 | 新智元 | [EmbodiedMemory-Bench](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_memory) | [具身智能体长程记忆：看见不等于记住，浙大提出具身记忆基准](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652735627&idx=3&sn=2195898b4588173b111e6ffc13732156) · [智源社区转载](https://hub.baai.ac.cn/view/58804) |
+| 2026.10 | 青稞 AI | [Spatial-Interactor](https://github.com/ZJU-OmniAI/Spatial-Interactor) | [让大模型从运动和交互中学习空间推理，理解环境变化。浙大团队最新提出Spatial-Interactor](https://www.qingkeai.online/blog/Spatial-Interactor) |
+
 ## Research Directions
 
 <a name="embodied-cerebellum"></a>
