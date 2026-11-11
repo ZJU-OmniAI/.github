@@ -30,8 +30,8 @@
     },
     "omnex-vl": {
       "datasets": 351,
-      "models": 61,
-      "total": 412
+      "models": 62,
+      "total": 413
     },
     "provise": {
       "datasets": 2400,
@@ -45,8 +45,8 @@
     },
     "spatial-interactor": {
       "datasets": 3856,
-      "models": 917,
-      "total": 4773
+      "models": 919,
+      "total": 4775
     },
     "verirl": {
       "datasets": 781,
@@ -74,13 +74,13 @@
     "dataset:wx91726/SpatialGen-Bench": 2400,
     "dataset:zwq2018/embodied_reasoner": 22237,
     "model:Chenbao77/VLA-Rolling": 0,
-    "model:OmniAI-ZJU/OMNEX-VL": 61,
+    "model:OmniAI-ZJU/OMNEX-VL": 62,
     "model:UnderTides/Embodied-Navigator-7B-GRPO": 79,
     "model:XuanyuLiu/Scene-Builder-Qwen3-VL-8B-Instruct": 129,
     "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-3B": 187,
     "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-7B": 232,
     "model:kagakouko/Spatial-Interactor-Qwen3-VL-4B": 284,
-    "model:kagakouko/Spatial-Interactor-Qwen3-VL-8B": 214,
+    "model:kagakouko/Spatial-Interactor-Qwen3-VL-8B": 216,
     "model:t0rn0d0/VLA-Delta-base": 35,
     "model:t0rn0d0/VLA-Delta-libero": 57,
     "model:t0rn0d0/VLA-Delta-robotwin": 24,
@@ -89,8 +89,8 @@
   "schemaVersion": 1,
   "team": {
     "datasets": 95444,
-    "models": 1900,
-    "total": 97344
+    "models": 1903,
+    "total": 97347
   },
-  "updatedAt": "2026-11-10T18:12:34+00:00"
+  "updatedAt": "2026-11-11T10:42:54+00:00"
 }
