@@ -1,17 +1,17 @@
 {
   "groups": {
     "embodied-omni": {
-      "datasets": 88780,
+      "datasets": 90494,
       "models": 79,
-      "total": 88859
+      "total": 90573
     }
   },
   "metric": "downloadsAllTime",
   "projects": {
     "embodied-memory-bench": {
-      "datasets": 66330,
+      "datasets": 67920,
       "models": 0,
-      "total": 66330
+      "total": 67920
     },
     "embodied-navigator": {
       "datasets": 0,
@@ -19,44 +19,44 @@
       "total": 79
     },
     "embodied-reasoner": {
-      "datasets": 22450,
+      "datasets": 22574,
       "models": 0,
-      "total": 22450
+      "total": 22574
     },
     "gft": {
-      "datasets": 438,
+      "datasets": 439,
       "models": 0,
-      "total": 438
+      "total": 439
     },
     "omnex-vl": {
-      "datasets": 351,
+      "datasets": 352,
       "models": 62,
-      "total": 413
+      "total": 414
     },
     "provise": {
-      "datasets": 2411,
+      "datasets": 2424,
       "models": 0,
-      "total": 2411
+      "total": 2424
     },
     "scene-designer": {
-      "datasets": 354,
+      "datasets": 355,
       "models": 131,
-      "total": 485
+      "total": 486
     },
     "spatial-interactor": {
-      "datasets": 3909,
-      "models": 919,
-      "total": 4828
+      "datasets": 3991,
+      "models": 936,
+      "total": 4927
     },
     "verirl": {
-      "datasets": 783,
-      "models": 598,
-      "total": 1381
+      "datasets": 784,
+      "models": 600,
+      "total": 1384
     },
     "vla-delta": {
       "datasets": 0,
-      "models": 117,
-      "total": 117
+      "models": 122,
+      "total": 122
     },
     "vla-rolling": {
       "datasets": 0,
@@ -65,32 +65,32 @@
     }
   },
   "resources": {
-    "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 438,
-    "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 351,
-    "dataset:XuanyuLiu/Scene-OTC-Bench": 354,
-    "dataset:kagakouko/LSI-108K": 3909,
-    "dataset:lzLiang/EmbodiedMemoryBench": 66330,
-    "dataset:tttboy/Veribench-53K": 783,
-    "dataset:wx91726/SpatialGen-Bench": 2411,
-    "dataset:zwq2018/embodied_reasoner": 22450,
+    "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 439,
+    "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 352,
+    "dataset:XuanyuLiu/Scene-OTC-Bench": 355,
+    "dataset:kagakouko/LSI-108K": 3991,
+    "dataset:lzLiang/EmbodiedMemoryBench": 67920,
+    "dataset:tttboy/Veribench-53K": 784,
+    "dataset:wx91726/SpatialGen-Bench": 2424,
+    "dataset:zwq2018/embodied_reasoner": 22574,
     "model:Chenbao77/VLA-Rolling": 0,
     "model:OmniAI-ZJU/OMNEX-VL": 62,
     "model:UnderTides/Embodied-Navigator-7B-GRPO": 79,
     "model:XuanyuLiu/Scene-Builder-Qwen3-VL-8B-Instruct": 131,
-    "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-3B": 187,
-    "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-7B": 232,
-    "model:kagakouko/Spatial-Interactor-Qwen3-VL-4B": 284,
-    "model:kagakouko/Spatial-Interactor-Qwen3-VL-8B": 216,
-    "model:t0rn0d0/VLA-Delta-base": 35,
-    "model:t0rn0d0/VLA-Delta-libero": 58,
-    "model:t0rn0d0/VLA-Delta-robotwin": 24,
-    "model:tttboy/Verirl-CodeQwen2.5": 598
+    "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-3B": 191,
+    "model:kagakouko/Spatial-Interactor-Qwen2.5-VL-7B": 237,
+    "model:kagakouko/Spatial-Interactor-Qwen3-VL-4B": 290,
+    "model:kagakouko/Spatial-Interactor-Qwen3-VL-8B": 218,
+    "model:t0rn0d0/VLA-Delta-base": 37,
+    "model:t0rn0d0/VLA-Delta-libero": 60,
+    "model:t0rn0d0/VLA-Delta-robotwin": 25,
+    "model:tttboy/Verirl-CodeQwen2.5": 600
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 97026,
-    "models": 1906,
-    "total": 98932
+    "datasets": 98839,
+    "models": 1930,
+    "total": 100769
   },
-  "updatedAt": "2026-11-11T18:07:40+00:00"
+  "updatedAt": "2026-11-12T16:21:46+00:00"
 }
