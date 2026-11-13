@@ -1,17 +1,17 @@
 {
   "groups": {
     "embodied-omni": {
-      "datasets": 90494,
+      "datasets": 92850,
       "models": 79,
-      "total": 90573
+      "total": 92929
     }
   },
   "metric": "downloadsAllTime",
   "projects": {
     "embodied-memory-bench": {
-      "datasets": 67920,
+      "datasets": 70143,
       "models": 0,
-      "total": 67920
+      "total": 70143
     },
     "embodied-navigator": {
       "datasets": 0,
@@ -19,19 +19,19 @@
       "total": 79
     },
     "embodied-reasoner": {
-      "datasets": 22574,
+      "datasets": 22707,
       "models": 0,
-      "total": 22574
+      "total": 22707
     },
     "gft": {
-      "datasets": 439,
+      "datasets": 441,
       "models": 0,
-      "total": 439
+      "total": 441
     },
     "omnex-vl": {
-      "datasets": 352,
+      "datasets": 354,
       "models": 62,
-      "total": 414
+      "total": 416
     },
     "provise": {
       "datasets": 2424,
@@ -39,14 +39,14 @@
       "total": 2424
     },
     "scene-designer": {
-      "datasets": 355,
+      "datasets": 356,
       "models": 132,
-      "total": 487
+      "total": 488
     },
     "spatial-interactor": {
-      "datasets": 3991,
+      "datasets": 4064,
       "models": 939,
-      "total": 4930
+      "total": 5003
     },
     "verirl": {
       "datasets": 784,
@@ -65,14 +65,14 @@
     }
   },
   "resources": {
-    "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 439,
-    "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 352,
-    "dataset:XuanyuLiu/Scene-OTC-Bench": 355,
-    "dataset:kagakouko/LSI-108K": 3991,
-    "dataset:lzLiang/EmbodiedMemoryBench": 67920,
+    "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 441,
+    "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 354,
+    "dataset:XuanyuLiu/Scene-OTC-Bench": 356,
+    "dataset:kagakouko/LSI-108K": 4064,
+    "dataset:lzLiang/EmbodiedMemoryBench": 70143,
     "dataset:tttboy/Veribench-53K": 784,
     "dataset:wx91726/SpatialGen-Bench": 2424,
-    "dataset:zwq2018/embodied_reasoner": 22574,
+    "dataset:zwq2018/embodied_reasoner": 22707,
     "model:Chenbao77/VLA-Rolling": 0,
     "model:OmniAI-ZJU/OMNEX-VL": 62,
     "model:UnderTides/Embodied-Navigator-7B-GRPO": 79,
@@ -88,9 +88,9 @@
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 98839,
+    "datasets": 101273,
     "models": 1938,
-    "total": 100777
+    "total": 103211
   },
-  "updatedAt": "2026-11-13T10:06:33+00:00"
+  "updatedAt": "2026-11-13T17:43:48+00:00"
 }
