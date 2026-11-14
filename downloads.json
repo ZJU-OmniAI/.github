@@ -50,8 +50,8 @@
     },
     "verirl": {
       "datasets": 784,
-      "models": 601,
-      "total": 1385
+      "models": 605,
+      "total": 1389
     },
     "vla-delta": {
       "datasets": 0,
@@ -84,13 +84,13 @@
     "model:t0rn0d0/VLA-Delta-base": 38,
     "model:t0rn0d0/VLA-Delta-libero": 61,
     "model:t0rn0d0/VLA-Delta-robotwin": 26,
-    "model:tttboy/Verirl-CodeQwen2.5": 601
+    "model:tttboy/Verirl-CodeQwen2.5": 605
   },
   "schemaVersion": 1,
   "team": {
     "datasets": 101273,
-    "models": 1938,
-    "total": 103211
+    "models": 1942,
+    "total": 103215
   },
-  "updatedAt": "2026-11-13T17:43:48+00:00"
+  "updatedAt": "2026-11-14T10:06:25+00:00"
 }
