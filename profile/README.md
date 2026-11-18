@@ -43,14 +43,15 @@ Automatically updated GitHub stars and all-time Hugging Face download counts. Hu
 
 ## Media Coverage · 媒体报道
 
-| Month | Media | Project | Coverage |
-| :--- | :--- | :--- | :--- |
-| 2026.11 | 量子位 | [VLA-Δ](https://github.com/ZJU-OmniAI/VLA-Delta) | [2B模型拿下98.4%成功率！浙大VLA新成果让机器人学会状态变化](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247944089&idx=3&sn=921607acca3d33beb525df750c81272b&chksm=e9251f0e49a96bc5bc031302fd92ceb5984e597eb46cebeb469be0107602844b039915dec49e#rd) |
-| 2026.10 | 新智元 | [EmbodiedMemory-Bench](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_memory) | [具身智能体长程记忆：看见不等于记住，浙大提出具身记忆基准](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652735627&idx=3&sn=2195898b4588173b111e6ffc13732156) |
-| 2026.10 | 青稞 AI | [Spatial-Interactor](https://github.com/ZJU-OmniAI/Spatial-Interactor) | [让大模型从运动和交互中学习空间推理，理解环境变化。浙大团队最新提出Spatial-Interactor](https://www.qingkeai.online/blog/Spatial-Interactor) |
-| 2026.09 | 机器之心 | [VLA-Corrector](https://github.com/ZJU-OmniAI/vla-corrector) | [VLA开环盲区，终于被堵上了：40M Corrector让机器人边做边纠错](https://mp.weixin.qq.com/s/rfSPbtc2_fRpggXeBPPC3Q) |
-| 2026.08 | 机器之心 | [ProVisE](https://github.com/ZJU-OmniAI/ProVisE) | [让生成式模型「画」出空间智能，而非强迫LLM输出「坐标」! 浙大提出Agentic空间认知评估框架](https://www.jiqizhixin.com/articles/2026-08-08-4) · [微信原文](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651049201&idx=3&sn=0d392ccc606293b0469161d091a1d940&chksm=85dcf83ea1bfefa7e91ac9e0132a73729751589a0ef4bfc3e6078a510bda7c0ed3b55d79a251#rd) |
-| 2026.07 | 具身智能之心 | [VLA-Corrector](https://github.com/ZJU-OmniAI/vla-corrector) | [40M 补上开环盲区！VLA-Corrector 让 VLA 学会发现并纠错（浙大&达摩院）](https://mp.weixin.qq.com/s?__biz=MzkyMDY0OTc1NA==&mid=2247540637&idx=1&sn=0f177736092e21a930e0d9dc40a2a583) |
+| Month | Media | Project | Project page | Coverage |
+| :--- | :--- | :--- | :--- | :--- |
+| 2026.11 | 量子位 | [VLA-Δ](https://github.com/ZJU-OmniAI/VLA-Delta) | [项目主页](https://zju-omniai.github.io/VLA-Delta/) | [2B模型拿下98.4%成功率！浙大VLA新成果让机器人学会状态变化](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247944089&idx=3&sn=921607acca3d33beb525df750c81272b&chksm=e9251f0e49a96bc5bc031302fd92ceb5984e597eb46cebeb469be0107602844b039915dec49e#rd) |
+| 2026.10 | 新智元 | [EmbodiedMemory-Bench](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_memory) | [项目主页](https://zju-omniai.github.io/Embodied-Omni/EmbodiedMemoryBench/) | [具身智能体长程记忆：看见不等于记住，浙大提出具身记忆基准](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652735627&idx=3&sn=2195898b4588173b111e6ffc13732156) |
+| 2026.10 | 青稞 AI | [Spatial-Interactor](https://github.com/ZJU-OmniAI/Spatial-Interactor) | [项目主页](https://zju-omniai.github.io/Spatial-Interactor/) | [让大模型从运动和交互中学习空间推理，理解环境变化。浙大团队最新提出Spatial-Interactor](https://www.qingkeai.online/blog/Spatial-Interactor) |
+| 2026.09 | 机器之心 | [VLA-Corrector](https://github.com/ZJU-OmniAI/vla-corrector) | [项目主页](https://zju-omniai.github.io/vla-corrector/) | [VLA开环盲区，终于被堵上了：40M Corrector让机器人边做边纠错](https://mp.weixin.qq.com/s/rfSPbtc2_fRpggXeBPPC3Q) |
+| 2026.08 | 新智英 | [Embodied-Navigator](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_navigator) | [项目主页](https://zju-omniai.github.io/Embodied-Navigator/) | [浙大&浙江人形提出高效具身导航模型，统一动作、思考、记忆与强化学习！](https://mp.weixin.qq.com/s?__biz=MzE5MTA0NzYxMQ==&mid=2247517546&idx=1&sn=36f6f48ef7b205cf90921a6a0326cc68&chksm=97edfe09f63dfb5ccf46fd2d1e053538b6eadff657e2bc32af7dc1723ccae29ccc05cb0620eb#rd) |
+| 2026.08 | 机器之心 | [ProVisE](https://github.com/ZJU-OmniAI/ProVisE) | [项目主页](https://zju-omniai.github.io/ProVisE/) | [让生成式模型「画」出空间智能，而非强迫LLM输出「坐标」! 浙大提出Agentic空间认知评估框架](https://www.jiqizhixin.com/articles/2026-08-08-4) · [微信原文](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651049201&idx=3&sn=0d392ccc606293b0469161d091a1d940&chksm=85dcf83ea1bfefa7e91ac9e0132a73729751589a0ef4bfc3e6078a510bda7c0ed3b55d79a251#rd) |
+| 2026.07 | 具身智能之心 | [VLA-Corrector](https://github.com/ZJU-OmniAI/vla-corrector) | [项目主页](https://zju-omniai.github.io/vla-corrector/) | [40M 补上开环盲区！VLA-Corrector 让 VLA 学会发现并纠错（浙大&达摩院）](https://mp.weixin.qq.com/s?__biz=MzkyMDY0OTc1NA==&mid=2247540637&idx=1&sn=0f177736092e21a930e0d9dc40a2a583) |
 
 ## Research Directions
 
