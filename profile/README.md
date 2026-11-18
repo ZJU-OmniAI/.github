@@ -12,6 +12,13 @@ We build AI systems that connect multimodal understanding with reasoning and act
 我们关注从感知、推理、记忆到行动的智能闭环，以<strong>具身小脑与具身大脑</strong>为主线，探索通用智能的学习与实践。
 
 <p align="center">
+  <a href="#recent-highlights">近期成果</a> ·
+  <a href="#media-coverage">媒体报道</a> ·
+  <a href="https://github.com/orgs/ZJU-OmniAI/repositories">全部仓库</a> ·
+  <a href="https://huggingface.co/OmniAI-ZJU">Hugging Face</a>
+</p>
+
+<p align="center">
   <a href="#embodied-cerebellum">具身小脑</a> ·
   <a href="#embodied-brain">具身大脑</a> ·
   <a href="#spatial-intelligence">空间智能</a> ·
@@ -29,17 +36,20 @@ Automatically updated GitHub stars and all-time Hugging Face download counts. Hu
 | Date | Work | What's new |
 | :--- | :--- | :--- |
 | **2026.10** | [**Scene-Designer**](https://github.com/ZJU-OmniAI/Scene-Designer) | Agentic 3D scene generation that learns to both design and critique scenes, from **Scene-OTA-35K** and **Scene-OTC-15K** with Critic-guided Scene-GRPO. [Paper](https://arxiv.org/abs/2610.23121) · [Project](https://zju-omniai.github.io/Scene-Designer/) · [![model downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2FXuanyuLiu%2FScene-Builder-Qwen3-VL-8B-Instruct%3Fexpand%255B%255D%3DdownloadsAllTime&query=%24.downloadsAllTime&label=model+downloads&color=FFD21E&logo=huggingface&cacheSeconds=300)](https://huggingface.co/XuanyuLiu/Scene-Builder-Qwen3-VL-8B-Instruct) [![dataset downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FXuanyuLiu%2FScene-OTC-Bench%3Fexpand%255B%255D%3DdownloadsAllTime&query=%24.downloadsAllTime&label=dataset+downloads&color=FFD21E&logo=huggingface&cacheSeconds=300)](https://huggingface.co/datasets/XuanyuLiu/Scene-OTC-Bench) · [![Scene-Designer GitHub stars](https://img.shields.io/github/stars/ZJU-OmniAI/Scene-Designer?style=flat&logo=github&label=stars&color=181717&cacheSeconds=300)](https://github.com/ZJU-OmniAI/Scene-Designer/stargazers) |
-| **2026.10** | [**VLA-Δ**](https://github.com/ZJU-OmniAI/VLA-Delta) | A VLA that learns how the physical state changes, not only which action to take; **98.4%** average success on LIBERO and **90.06%** on RoboTwin 2.0 (Clean). [Paper](https://arxiv.org/abs/2610.21306) · [Project](https://zju-omniai.github.io/VLA-Delta/) · [![models downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FZJU-OmniAI%2F.github%2Fhf-download-stats%2Fdownloads.json&query=%24.projects%5B%22vla-delta%22%5D.models&label=models+downloads&color=FFD21E&logo=huggingface&cacheSeconds=300)](https://raw.githubusercontent.com/ZJU-OmniAI/.github/hf-download-stats/downloads.json) · [![VLA-Delta GitHub stars](https://img.shields.io/github/stars/ZJU-OmniAI/VLA-Delta?style=flat&logo=github&label=stars&color=181717&cacheSeconds=300)](https://github.com/ZJU-OmniAI/VLA-Delta/stargazers) |
+| **2026.10** | [**VLA-Δ**](https://github.com/ZJU-OmniAI/VLA-Delta) | Learns physical state transitions for robot control, with average success rates of **98.4%** on LIBERO, **90.06%** on RoboTwin 2.0 (Clean), and **68.0%** across five real-robot tasks. [Paper](https://arxiv.org/abs/2610.21306) · [Project](https://zju-omniai.github.io/VLA-Delta/) · [![models downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FZJU-OmniAI%2F.github%2Fhf-download-stats%2Fdownloads.json&query=%24.projects%5B%22vla-delta%22%5D.models&label=models+downloads&color=FFD21E&logo=huggingface&cacheSeconds=300)](https://raw.githubusercontent.com/ZJU-OmniAI/.github/hf-download-stats/downloads.json) · [![VLA-Delta GitHub stars](https://img.shields.io/github/stars/ZJU-OmniAI/VLA-Delta?style=flat&logo=github&label=stars&color=181717&cacheSeconds=300)](https://github.com/ZJU-OmniAI/VLA-Delta/stargazers) |
 | **2026.09** | [**EmbodiedMemory-Bench**](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_memory) | A benchmark for memory in long-horizon embodied tasks, with **2,554 executable episodes**. [Paper](https://arxiv.org/abs/2609.28236) · [![dataset downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FlzLiang%2FEmbodiedMemoryBench%3Fexpand%255B%255D%3DdownloadsAllTime&query=%24.downloadsAllTime&label=dataset+downloads&color=FFD21E&logo=huggingface&cacheSeconds=300)](https://huggingface.co/datasets/lzLiang/EmbodiedMemoryBench) · [![Embodied-Omni GitHub stars](https://img.shields.io/github/stars/ZJU-OmniAI/Embodied-Omni?style=flat&logo=github&label=Embodied-Omni%20stars&color=181717&cacheSeconds=300)](https://github.com/ZJU-OmniAI/Embodied-Omni/stargazers) |
+
+<a name="media-coverage"></a>
 
 ## Media Coverage · 媒体报道
 
 | Month | Media | Project | Coverage |
 | :--- | :--- | :--- | :--- |
+| 2026.11 | 量子位 | [VLA-Δ](https://github.com/ZJU-OmniAI/VLA-Delta) | [2B模型拿下98.4%成功率！浙大VLA新成果让机器人学会状态变化](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247944089&idx=3&sn=921607acca3d33beb525df750c81272b&chksm=e9251f0e49a96bc5bc031302fd92ceb5984e597eb46cebeb469be0107602844b039915dec49e#rd) |
 | 2026.10 | 新智元 | [EmbodiedMemory-Bench](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_memory) | [具身智能体长程记忆：看见不等于记住，浙大提出具身记忆基准](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652735627&idx=3&sn=2195898b4588173b111e6ffc13732156) |
 | 2026.10 | 青稞 AI | [Spatial-Interactor](https://github.com/ZJU-OmniAI/Spatial-Interactor) | [让大模型从运动和交互中学习空间推理，理解环境变化。浙大团队最新提出Spatial-Interactor](https://www.qingkeai.online/blog/Spatial-Interactor) |
 | 2026.09 | 机器之心 | [VLA-Corrector](https://github.com/ZJU-OmniAI/vla-corrector) | [VLA开环盲区，终于被堵上了：40M Corrector让机器人边做边纠错](https://mp.weixin.qq.com/s/rfSPbtc2_fRpggXeBPPC3Q) |
-| 2026.08 | 机器之心 | [ProVisE](https://github.com/ZJU-OmniAI/ProVisE) | [让生成式模型「画」出空间智能，而非强迫LLM输出「坐标」! 浙大提出Agentic空间认知评估框架](https://www.jiqizhixin.com/articles/2026-08-08-4) |
+| 2026.08 | 机器之心 | [ProVisE](https://github.com/ZJU-OmniAI/ProVisE) | [让生成式模型「画」出空间智能，而非强迫LLM输出「坐标」! 浙大提出Agentic空间认知评估框架](https://www.jiqizhixin.com/articles/2026-08-08-4) · [微信原文](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651049201&idx=3&sn=0d392ccc606293b0469161d091a1d940&chksm=85dcf83ea1bfefa7e91ac9e0132a73729751589a0ef4bfc3e6078a510bda7c0ed3b55d79a251#rd) |
 | 2026.07 | 具身智能之心 | [VLA-Corrector](https://github.com/ZJU-OmniAI/vla-corrector) | [40M 补上开环盲区！VLA-Corrector 让 VLA 学会发现并纠错（浙大&达摩院）](https://mp.weixin.qq.com/s?__biz=MzkyMDY0OTc1NA==&mid=2247540637&idx=1&sn=0f177736092e21a930e0d9dc40a2a583) |
 
 ## Research Directions
