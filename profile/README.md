@@ -11,7 +11,7 @@
   <a href="https://github.com/orgs/ZJU-OmniAI/repositories"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-ZJU--OmniAI-181717?style=flat-square&logo=github&logoColor=white" align="top"></a>
   <a href="https://huggingface.co/OmniAI-ZJU"><img alt="Hugging Face" src="https://img.shields.io/badge/Hugging%20Face-OmniAI--ZJU-FFB000?style=flat-square&logo=huggingface&logoColor=white" align="top"></a>
   <a href="#news"><img alt="Media coverage" src="https://img.shields.io/badge/Media-%E9%87%8F%E5%AD%90%E4%BD%8D%20%C2%B7%20%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83%20%C2%B7%20%E6%96%B0%E6%99%BA%E5%85%83-07C160?style=flat-square&logo=wechat&logoColor=white" align="top"></a>
-  <a href="mailto:zhangwenqi@zju.edu.cn"><img alt="Contact" src="https://img.shields.io/badge/Contact-zhangwenqi%40zju.edu.cn-0B6BE0?style=flat-square" align="top"></a>
+  <a href="mailto:zhangwenqi@zju.edu.cn"><img alt="Contact: zhangwenqi@zju.edu.cn" src="https://img.shields.io/badge/Contact-Email-0B6BE0?style=flat-square&logo=maildotru&logoColor=white" align="top"></a>
   <br>
   <a href="https://github.com/ZJU-OmniAI"><img alt="Total GitHub stars" src="https://img.shields.io/github/stars/ZJU-OmniAI?style=social&label=Stars" align="absbottom"></a>
   &nbsp;
@@ -136,11 +136,12 @@
 
 Action learning, efficient execution, and closed-loop correction. 让机器人理解动作带来的物理变化，在执行中感知偏差、及时纠错。
 
-| Project | Focus | Links |
-| :-- | :-- | :-- |
-| **[VLA-Corrector](https://github.com/ZJU-OmniAI/vla-corrector)**<br><sub>NeurIPS 2026</sub> | Monitor visual drift during action chunks, interrupt stale actions, and guide corrective replanning with a lightweight external corrector. | [Paper](https://arxiv.org/abs/2607.01804) · [Project](https://zju-omniai.github.io/vla-corrector/) |
-| **[VLA-Δ](https://github.com/ZJU-OmniAI/VLA-Delta)**<br><sub>arXiv 2026</sub> | Learn action-relevant representations from physical state differences, then generate continuous actions with a flow-matching action expert. | [Paper](https://arxiv.org/abs/2610.21306) · [Project](https://zju-omniai.github.io/VLA-Delta/) · [🤗 Models](https://huggingface.co/models?search=t0rn0d0/VLA-Delta) |
-| **[VLA-Rolling](https://github.com/ZJU-OmniAI/VLA-Rolling)**<br><sub>arXiv 2026</sub> | Carry the unexecuted action tail into the next planning window; a confidence estimator sets renoising and the denoising budget. | [Paper](https://arxiv.org/abs/2610.25043) · [Project](https://chenbao123ww.github.io/VLA-Rolling/) · [🤗 Model](https://huggingface.co/Chenbao77/VLA-Rolling) |
+<table>
+<tr><th align="left" width="27%">Project</th><th align="left">What it does</th></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/vla-corrector">VLA-Corrector</a></b><br><sub>NeurIPS 2026</sub></td><td valign="top">Monitor visual drift during action chunks, interrupt stale actions, and guide corrective replanning with a lightweight external corrector.<br><sub><a href="https://arxiv.org/abs/2607.01804">Paper</a> · <a href="https://zju-omniai.github.io/vla-corrector/">Project</a></sub></td></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/VLA-Delta">VLA-Δ</a></b><br><sub>arXiv 2026</sub></td><td valign="top">Learn action-relevant representations from physical state differences, then generate continuous actions with a flow-matching action expert.<br><sub><a href="https://arxiv.org/abs/2610.21306">Paper</a> · <a href="https://zju-omniai.github.io/VLA-Delta/">Project</a> · <a href="https://huggingface.co/models?search=t0rn0d0/VLA-Delta">🤗&nbsp;Models</a></sub></td></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/VLA-Rolling">VLA-Rolling</a></b><br><sub>arXiv 2026</sub></td><td valign="top">Carry the unexecuted action tail into the next planning window; a confidence estimator sets renoising and the denoising budget.<br><sub><a href="https://arxiv.org/abs/2610.25043">Paper</a> · <a href="https://chenbao123ww.github.io/VLA-Rolling/">Project</a> · <a href="https://huggingface.co/Chenbao77/VLA-Rolling">🤗&nbsp;Model</a></sub></td></tr>
+</table>
 
 📚 Reading list: **[Awesome Closed-Loop VLA](https://github.com/ZJU-OmniAI/Awesome-Closed-Loop-VLA)**, connecting execution, prediction, and learning loops.
 
@@ -150,11 +151,12 @@ Action learning, efficient execution, and closed-loop correction. 让机器人�
 
 Reasoning, planning, navigation, and memory for long-horizon interaction. 让智能体理解环境、记住经验、规划任务，并在交互中反思与调整。All three projects live in the **[Embodied-Omni](https://github.com/ZJU-OmniAI/Embodied-Omni)** repository.
 
-| Project | Focus | Links |
-| :-- | :-- | :-- |
-| **[Embodied-Reasoner](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_reasoner)**<br><sub>ACL 2026 Main</sub> | Combine visual search, long-horizon planning, environment-state reasoning, and reflection in an observation–thought–action loop. | [Paper](https://aclanthology.org/2026.acl-long.1910/) · [Project](https://embodied-reasoner.github.io/) · [🤗 Data](https://huggingface.co/datasets/zwq2018/embodied_reasoner) |
-| **[Embodied-Navigator](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_navigator)**<br><sub>arXiv 2026</sub> | Connect pixel pointing to 3D navigation with selective reasoning, Anchor-Trajectory Memory, and Two-Level GRPO. | [Paper](https://arxiv.org/abs/2608.17512) · [Project](https://zju-omniai.github.io/Embodied-Navigator/) · [🤗 Model](https://huggingface.co/UnderTides/Embodied-Navigator-7B-GRPO) |
-| **[EmbodiedMemory-Bench](https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_memory)**<br><sub>arXiv 2026</sub> | Evaluate retained observations, changing world states, interaction-derived knowledge, and experience generalization. | [Paper](https://arxiv.org/abs/2609.28236) · [Project](https://zju-omniai.github.io/Embodied-Omni/EmbodiedMemoryBench/) · [🤗 Data](https://huggingface.co/datasets/lzLiang/EmbodiedMemoryBench) |
+<table>
+<tr><th align="left" width="27%">Project</th><th align="left">What it does</th></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_reasoner">Embodied-Reasoner</a></b><br><sub>ACL 2026 Main</sub></td><td valign="top">Combine visual search, long-horizon planning, environment-state reasoning, and reflection in an observation–thought–action loop.<br><sub><a href="https://aclanthology.org/2026.acl-long.1910/">Paper</a> · <a href="https://embodied-reasoner.github.io/">Project</a> · <a href="https://huggingface.co/datasets/zwq2018/embodied_reasoner">🤗&nbsp;Data</a></sub></td></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_navigator">Embodied-Navigator</a></b><br><sub>arXiv 2026</sub></td><td valign="top">Connect pixel pointing to 3D navigation with selective reasoning, Anchor-Trajectory Memory, and Two-Level GRPO.<br><sub><a href="https://arxiv.org/abs/2608.17512">Paper</a> · <a href="https://zju-omniai.github.io/Embodied-Navigator/">Project</a> · <a href="https://huggingface.co/UnderTides/Embodied-Navigator-7B-GRPO">🤗&nbsp;Model</a></sub></td></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/Embodied-Omni/tree/main/embodied_memory">EmbodiedMemory-Bench</a></b><br><sub>arXiv 2026</sub></td><td valign="top">Evaluate retained observations, changing world states, interaction-derived knowledge, and experience generalization.<br><sub><a href="https://arxiv.org/abs/2609.28236">Paper</a> · <a href="https://zju-omniai.github.io/Embodied-Omni/EmbodiedMemoryBench/">Project</a> · <a href="https://huggingface.co/datasets/lzLiang/EmbodiedMemoryBench">🤗&nbsp;Data</a></sub></td></tr>
+</table>
 
 <a name="spatial-intelligence"></a>
 
@@ -162,11 +164,12 @@ Reasoning, planning, navigation, and memory for long-horizon interaction. 让智
 
 Learning and evaluating how AI understands and constructs the physical world. 从交互中学习空间关系与状态变化，建立可检验的空间认知，并让智能体设计物理合理、功能正确的 3D 场景。
 
-| Project | Focus | Links |
-| :-- | :-- | :-- |
-| **[Spatial-Interactor](https://github.com/ZJU-OmniAI/Spatial-Interactor)**<br><sub>arXiv 2026</sub> | Learn local state transitions and long-horizon spatial reasoning from real and simulated interaction trajectories. | [Paper](https://arxiv.org/abs/2609.23038) · [Project](https://zju-omniai.github.io/Spatial-Interactor/) · [🤗 Models](https://huggingface.co/models?search=kagakouko/Spatial-Interactor) · [🤗 Data](https://huggingface.co/datasets/kagakouko/LSI-108K) |
-| **[ProVisE](https://github.com/ZJU-OmniAI/ProVisE)**<br><sub>arXiv 2026</sub> | Evaluate spatial cognition through protocol-constrained visual answers, sharing task semantics and metrics across model families. | [Paper](https://arxiv.org/abs/2607.21072) · [Project](https://zju-omniai.github.io/ProVisE/) · [🤗 Data](https://huggingface.co/datasets/wx91726/SpatialGen-Bench) |
-| **[Scene-Designer](https://github.com/ZJU-OmniAI/Scene-Designer)**<br><sub>arXiv 2026</sub> | Build physically valid, functionally correct, layout-coherent 3D scenes, critique their quality, and refine design decisions with Critic-guided Scene-GRPO. | [Paper](https://arxiv.org/abs/2610.23121) · [Project](https://zju-omniai.github.io/Scene-Designer/) · [🤗 Model](https://huggingface.co/XuanyuLiu/Scene-Builder-Qwen3-VL-8B-Instruct) · [🤗 Data](https://huggingface.co/datasets/XuanyuLiu/Scene-OTC-Bench) |
+<table>
+<tr><th align="left" width="27%">Project</th><th align="left">What it does</th></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/Spatial-Interactor">Spatial-Interactor</a></b><br><sub>arXiv 2026</sub></td><td valign="top">Learn local state transitions and long-horizon spatial reasoning from real and simulated interaction trajectories.<br><sub><a href="https://arxiv.org/abs/2609.23038">Paper</a> · <a href="https://zju-omniai.github.io/Spatial-Interactor/">Project</a> · <a href="https://huggingface.co/models?search=kagakouko/Spatial-Interactor">🤗&nbsp;Models</a> · <a href="https://huggingface.co/datasets/kagakouko/LSI-108K">🤗&nbsp;Data</a></sub></td></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/ProVisE">ProVisE</a></b><br><sub>arXiv 2026</sub></td><td valign="top">Evaluate spatial cognition through protocol-constrained visual answers, sharing task semantics and metrics across model families.<br><sub><a href="https://arxiv.org/abs/2607.21072">Paper</a> · <a href="https://zju-omniai.github.io/ProVisE/">Project</a> · <a href="https://huggingface.co/datasets/wx91726/SpatialGen-Bench">🤗&nbsp;Data</a></sub></td></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/Scene-Designer">Scene-Designer</a></b><br><sub>arXiv 2026</sub></td><td valign="top">Build physically valid, functionally correct, layout-coherent 3D scenes, critique their quality, and refine design decisions with Critic-guided Scene-GRPO.<br><sub><a href="https://arxiv.org/abs/2610.23121">Paper</a> · <a href="https://zju-omniai.github.io/Scene-Designer/">Project</a> · <a href="https://huggingface.co/XuanyuLiu/Scene-Builder-Qwen3-VL-8B-Instruct">🤗&nbsp;Model</a> · <a href="https://huggingface.co/datasets/XuanyuLiu/Scene-OTC-Bench">🤗&nbsp;Data</a></sub></td></tr>
+</table>
 
 📚 Reading list: **[Awesome World Model](https://github.com/ZJU-OmniAI/Awesome-World-Model)**, with papers, frameworks, datasets, and benchmarks for world-model research.
 
@@ -176,10 +179,11 @@ Learning and evaluating how AI understands and constructs the physical world. �
 
 Better visual grounding and more reliable multimodal understanding. 减少多模态幻觉，让模型的判断更忠实于视觉证据。
 
-| Project | Focus | Links |
-| :-- | :-- | :-- |
-| **[MGAP](https://github.com/ZJU-OmniAI/MGAP)**<br><sub>ICML 2026</sub> | Reduce object hallucinations with geometry-aware, training-free adaptive projection while preserving semantic structure. | [Paper](https://arxiv.org/abs/2606.09859) · [OpenReview](https://openreview.net/forum?id=LInDSHWGMK) |
-| **[OMNEX-VL](https://github.com/ZJU-OmniAI/OMNEX-VL)**<br><sub>AAAI 2026</sub> | Improve visual grounding through caption feedback, diversity-aware sampling, and conflict regularization. | [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/37772) · [🤗 Model](https://huggingface.co/OmniAI-ZJU/OMNEX-VL) · [🤗 Data](https://huggingface.co/datasets/OmniAI-ZJU/OMNEX-VL-DATA) |
+<table>
+<tr><th align="left" width="27%">Project</th><th align="left">What it does</th></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/MGAP">MGAP</a></b><br><sub>ICML 2026</sub></td><td valign="top">Reduce object hallucinations with geometry-aware, training-free adaptive projection while preserving semantic structure.<br><sub><a href="https://arxiv.org/abs/2606.09859">Paper</a> · <a href="https://openreview.net/forum?id=LInDSHWGMK">OpenReview</a></sub></td></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/OMNEX-VL">OMNEX-VL</a></b><br><sub>AAAI 2026</sub></td><td valign="top">Improve visual grounding through caption feedback, diversity-aware sampling, and conflict regularization.<br><sub><a href="https://ojs.aaai.org/index.php/AAAI/article/view/37772">Paper</a> · <a href="https://huggingface.co/OmniAI-ZJU/OMNEX-VL">🤗&nbsp;Model</a> · <a href="https://huggingface.co/datasets/OmniAI-ZJU/OMNEX-VL-DATA">🤗&nbsp;Data</a></sub></td></tr>
+</table>
 
 <a name="reasoning-and-rl"></a>
 
@@ -187,11 +191,12 @@ Better visual grounding and more reliable multimodal understanding. 减少多模
 
 Post-training methods for reasoning and verifiable generation. 研究从模仿学习到奖励优化的衔接，覆盖自回归与扩散语言模型，提升推理、代码生成与学习效率。
 
-| Project | Focus | Links |
-| :-- | :-- | :-- |
-| **[GFT](https://github.com/ZJU-OmniAI/GFT)**<br><sub>ACL 2026 Findings</sub> | Bridge imitation and reward fine-tuning with unbiased group advantages and dynamic coefficient rectification. | [Paper](https://aclanthology.org/2026.findings-acl.1444/) · [🤗 Data](https://huggingface.co/datasets/OmniAI-ZJU/NuminaMath-Cot-Distillation-100K) |
-| **[DTCA](https://github.com/ZJU-OmniAI/DTCA)**<br><sub>arXiv 2026</sub> | Assign token-level credit in RL for diffusion language models through contribution-weighted denoising-step selection, part-of-speech credit, and entropy-flow calibration. | [Paper](https://arxiv.org/abs/2610.35201) · [Project](https://zju-omniai.github.io/DTCA/) |
-| **[VeriRL](https://github.com/ZJU-OmniAI/VeriRL)**<br><sub>arXiv 2025</sub> | Improve Verilog generation through reinforcement learning with trace-back reward rescoring and sample-balanced optimization. | [Paper](https://arxiv.org/abs/2508.18462) · [🤗 Model](https://huggingface.co/tttboy/Verirl-CodeQwen2.5) · [🤗 Data](https://huggingface.co/datasets/tttboy/Veribench-53K) |
+<table>
+<tr><th align="left" width="27%">Project</th><th align="left">What it does</th></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/GFT">GFT</a></b><br><sub>ACL 2026 Findings</sub></td><td valign="top">Bridge imitation and reward fine-tuning with unbiased group advantages and dynamic coefficient rectification.<br><sub><a href="https://aclanthology.org/2026.findings-acl.1444/">Paper</a> · <a href="https://huggingface.co/datasets/OmniAI-ZJU/NuminaMath-Cot-Distillation-100K">🤗&nbsp;Data</a></sub></td></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/DTCA">DTCA</a></b><br><sub>arXiv 2026</sub></td><td valign="top">Assign token-level credit in RL for diffusion language models through contribution-weighted denoising-step selection, part-of-speech credit, and entropy-flow calibration.<br><sub><a href="https://arxiv.org/abs/2610.35201">Paper</a> · <a href="https://zju-omniai.github.io/DTCA/">Project</a></sub></td></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/VeriRL">VeriRL</a></b><br><sub>arXiv 2025</sub></td><td valign="top">Improve Verilog generation through reinforcement learning with trace-back reward rescoring and sample-balanced optimization.<br><sub><a href="https://arxiv.org/abs/2508.18462">Paper</a> · <a href="https://huggingface.co/tttboy/Verirl-CodeQwen2.5">🤗&nbsp;Model</a> · <a href="https://huggingface.co/datasets/tttboy/Veribench-53K">🤗&nbsp;Data</a></sub></td></tr>
+</table>
 
 <a name="autonomous-agents"></a>
 
@@ -199,10 +204,11 @@ Post-training methods for reasoning and verifiable generation. 研究从模仿�
 
 Agents that improve their policies and turn instructions into workflows. 从策略反思与优化，到数据分析、工具调用和自主工作流。
 
-| Project | Focus | Links |
-| :-- | :-- | :-- |
-| **[Agent-Pro](https://github.com/ZJU-OmniAI/Agent-Pro)**<br><sub>ACL 2024</sub> | Enable LLM agents to evolve their decision policies through policy-level reflection and optimization. | [Paper](https://aclanthology.org/2024.acl-long.292/) |
-| **[Data-Copilot](https://github.com/ZJU-OmniAI/Data-Copilot)**<br><sub>ICLR 2024 Workshop · Oral</sub> | Connect natural-language requests with heterogeneous data through autonomous tool design, analysis, and visualization workflows. | [Paper](https://arxiv.org/abs/2306.07209) · [OpenReview](https://openreview.net/forum?id=iUEBnQyfWE) |
+<table>
+<tr><th align="left" width="27%">Project</th><th align="left">What it does</th></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/Agent-Pro">Agent-Pro</a></b><br><sub>ACL 2024</sub></td><td valign="top">Enable LLM agents to evolve their decision policies through policy-level reflection and optimization.<br><sub><a href="https://aclanthology.org/2024.acl-long.292/">Paper</a></sub></td></tr>
+<tr><td valign="top"><b><a href="https://github.com/ZJU-OmniAI/Data-Copilot">Data-Copilot</a></b><br><sub>ICLR 2024 Workshop · Oral</sub></td><td valign="top">Connect natural-language requests with heterogeneous data through autonomous tool design, analysis, and visualization workflows.<br><sub><a href="https://arxiv.org/abs/2306.07209">Paper</a> · <a href="https://openreview.net/forum?id=iUEBnQyfWE">OpenReview</a></sub></td></tr>
+</table>
 
 <a name="tools"></a>
 
@@ -230,7 +236,8 @@ Agents that improve their policies and turn instructions into workflows. 从策�
 
 <div align="center">
 <br>
-Find our work useful? A ⭐ on the repository helps others discover it. 如果我们的工作对你有帮助，欢迎点个 ⭐
+Find our work useful? A ⭐ on the repository helps others discover it.<br>
+如果我们的工作对你有帮助，欢迎点个 ⭐
 <br><br>
 <a href="https://github.com/orgs/ZJU-OmniAI/repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/links/repos-dark.svg"><img alt="All Repositories" src="assets/links/repos-light.svg" height="28"></picture></a>&nbsp;
 <a href="https://huggingface.co/OmniAI-ZJU"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/links/huggingface-dark.svg"><img alt="Hugging Face" src="assets/links/huggingface-light.svg" height="28"></picture></a>&nbsp;

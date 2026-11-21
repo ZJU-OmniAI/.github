@@ -196,7 +196,7 @@ def chips_layout(names: list[str], size: float, pad: float, gap: float, max_w: f
 
 
 def research_map(t: Theme) -> str:
-    W, H = 1600, 960
+    W, H = 1600, 1012
     defs = GlyphDefs(prefix='m')
     g: list[str] = []
     extra = (f'<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t.bg0}"/>'
@@ -204,16 +204,16 @@ def research_map(t: Theme) -> str:
              f'<radialGradient id="glow"><stop offset="0" stop-color="{t.glow}" stop-opacity=".7"/>'
              f'<stop offset="1" stop-color="{t.glow}" stop-opacity="0"/></radialGradient>' + ring_gradient(t, 'M'))
     g.append(f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="28" fill="url(#bg)" stroke="{t.border}" stroke-width="2"/>')
-    cx, cy = 800, 517
+    cx, cy = 800, 534
     g.append(f'<circle cx="{cx}" cy="{cy}" r="250" fill="url(#glow)"/>')
     col_x = {'L': 40, 'R': 1040}
-    card_w, card_h, top, vgap = 520, 262, 104, 20
+    card_w, card_h, top, vgap = 520, 280, 108, 20
     heads = [('L', '具身智能', 'EMBODIED INTELLIGENCE', t.directions[0]), ('R', '通用智能', 'GENERAL-PURPOSE AI', t.directions[4])]
     for side, zh, en, color in heads:
         x0 = col_x[side] + 6
-        s, w = text(defs, zh, x0, 72, 26, 800, t.ink)
+        s, w = text(defs, zh, x0, 76, 29, 800, t.ink)
         g.append(s)
-        s, _ = text(defs, en, x0 + w + 16, 71, 17, 700, color, letter_spacing=2.6)
+        s, _ = text(defs, en, x0 + w + 16, 75, 19, 700, color, letter_spacing=2.6)
         g.append(s)
     outer = 212
     g.append(f'<circle cx="{cx}" cy="{cy}" r="{outer}" fill="none" stroke="{t.border}" stroke-width="2" stroke-dasharray="3 9"/>')
@@ -234,19 +234,25 @@ def research_map(t: Theme) -> str:
         g.append(f'<rect x="{x0}" y="{y0}" width="{card_w}" height="{card_h}" rx="20" fill="{t.card}" stroke="{t.card_border}" stroke-width="1.6"/>')
         g.append(f'<circle cx="{ex}" cy="{ymid:.1f}" r="5" fill="{color}"/>')
         g.append(f'<rect x="{x0}" y="{y0 + 22}" width="5" height="{card_h - 44}" rx="2.5" fill="{color}"/>')
-        g.append(f'<rect x="{x0 + 28}" y="{y0 + 26}" width="58" height="36" rx="18" fill="{color}" fill-opacity=".13"/>')
-        s, _ = text(defs, str(d['no']), x0 + 57, y0 + 51, 19, 800, color, anchor='middle', letter_spacing=1)
+        g.append(f'<rect x="{x0 + 28}" y="{y0 + 24}" width="64" height="40" rx="20" fill="{color}" fill-opacity=".13"/>')
+        s, _ = text(defs, str(d['no']), x0 + 60, y0 + 52, 21, 800, color, anchor='middle', letter_spacing=1)
         g.append(s)
-        s, _ = text(defs, str(d['zh']), x0 + 102, y0 + 55, 30, 800, t.ink)
+        s, _ = text(defs, str(d['zh']), x0 + 108, y0 + 57, 34, 800, t.ink)
         g.append(s)
-        s, _ = text(defs, str(d['en']), x0 + 30, y0 + 98, 16, 700, color, letter_spacing=2.2)
+        s, _ = text(defs, str(d['en']), x0 + 30, y0 + 102, 18, 700, color, letter_spacing=2.2)
         g.append(s)
-        s, _ = text(defs, str(d['focus']), x0 + 30, y0 + 134, 21, 500, t.body)
+        if measure(str(d['focus']), 24, 500) > card_w - 50:
+            raise ValueError(f"Focus line too long for the card: {d['focus']}")
+        s, _ = text(defs, str(d['focus']), x0 + 30, y0 + 142, 24, 500, t.body)
         g.append(s)
-        rows = chips_layout(list(d['projects']), 17, 13, 8, card_w - 60)  # type: ignore[arg-type]
-        chip_h, chip_gap = 38, 10
+        chip_size = 20
+        rows = chips_layout(list(d['projects']), chip_size, 15, 10, card_w - 60)  # type: ignore[arg-type]
+        while len(rows) > 2 and chip_size > 16:  # long names: shrink until two rows suffice
+            chip_size -= 1
+            rows = chips_layout(list(d['projects']), chip_size, 15, 10, card_w - 60)  # type: ignore[arg-type]
+        chip_h, chip_gap = 42, 10
         block = len(rows) * chip_h + (len(rows) - 1) * chip_gap
-        area_top, area_bottom = y0 + 154, y0 + card_h - 20
+        area_top, area_bottom = y0 + 164, y0 + card_h - 18
         cy0 = round(area_top + (area_bottom - area_top - block) / 2)
         for r_i, r in enumerate(rows):
             px = x0 + 30
@@ -254,22 +260,22 @@ def research_map(t: Theme) -> str:
             for name, w in r:
                 g.append(f'<rect x="{px:.1f}" y="{py}" width="{w:.1f}" height="{chip_h}" rx="{chip_h / 2}" fill="{color}" '
                          f'fill-opacity=".09" stroke="{color}" stroke-opacity=".38" stroke-width="1.4"/>')
-                s, _ = text(defs, name, px + w / 2, py + 25, 17, 650, color, anchor='middle')
+                s, _ = text(defs, name, px + w / 2, py + 21 + chip_size * 0.36, chip_size, 650, color, anchor='middle')
                 g.append(s)
-                px += w + 8
+                px += w + 10
     g.append(loop(t, cx, cy, 150, 32, 70, 24, 'M'))
     for (key, label, zh), a in zip(PILLARS, (-135, -45, 45, 135)):
         nx = cx + 150 * math.cos(math.radians(a))
         ny = cy + 150 * math.sin(math.radians(a))
         above = a < 0
-        ly = ny - 54 if above else ny + 74
-        s, _ = text(defs, label.upper(), nx, ly, 17, 800, t.pillars[key], anchor='middle', letter_spacing=2)
+        ly = ny - 56 if above else ny + 78
+        s, _ = text(defs, label.upper(), nx, ly, 19, 800, t.pillars[key], anchor='middle', letter_spacing=2)
         g.append(s)
-        s, _ = text(defs, zh, nx, ly + (-24 if above else 26), 17, 600, t.muted, anchor='middle', letter_spacing=2)
+        s, _ = text(defs, zh, nx, ly + (-26 if above else 28), 19, 600, t.muted, anchor='middle', letter_spacing=2)
         g.append(s)
-    s, _ = text(defs, '从感知、推理、记忆到行动的智能闭环', cx, 880, 22, 600, t.ink, anchor='middle', letter_spacing=1)
+    s, _ = text(defs, '从感知、推理、记忆到行动的智能闭环', cx, 900, 25, 600, t.ink, anchor='middle', letter_spacing=1)
     g.append(s)
-    s, _ = text(defs, 'Learning to perceive, reason, remember, and act', cx, 912, 17, 500, t.muted, anchor='middle')
+    s, _ = text(defs, 'Learning to perceive, reason, remember, and act', cx, 936, 19, 500, t.muted, anchor='middle')
     g.append(s)
     return svg_doc(W, H, 'OmniAI research map: six research directions around the perceive, reason, remember, act loop',
                    ''.join(g), defs, extra)
