@@ -3,7 +3,7 @@
 <p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="ZJU-OmniAI: Embodied Intelligence and General-Purpose AI. Perceive, reason, remember, act." src="assets/banner-light.svg" width="100%">
+  <img alt="ZJU-OmniAI: from the digital world to the physical world. Perceive, reason, act, remember." src="assets/banner-light.svg" width="100%">
 </picture>
 </p>
 
@@ -22,7 +22,7 @@
   <a href="https://raw.githubusercontent.com/ZJU-OmniAI/.github/hf-download-stats/downloads.json"><img alt="total downloads" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FZJU-OmniAI%2F.github%2Fhf-download-stats%2Fdownloads.json&amp;query=%24.team.total&amp;label=total+downloads&amp;color=FFD21E&amp;logo=huggingface&amp;cacheSeconds=300" align="top"></a>
 </p>
 
-**浙江大学 OmniAI 团队**，关注从感知、推理、记忆到行动的智能闭环，以**具身小脑与具身大脑**为主线，探索通用智能的学习与实践
+**浙江大学 OmniAI 团队**：从数字世界到物理世界，构建感知、推理、行动、记忆的智能闭环，以**具身小脑与具身大脑**为主线，探索通用智能的学习与实践
 
 </div>
 
@@ -31,7 +31,7 @@
   <img alt="" src="assets/divider-light.svg" width="100%">
 </picture>
 
-**ZJU-OmniAI** at Zhejiang University builds AI systems that connect multimodal understanding with reasoning and action. Our research spans **embodied intelligence**, **spatial cognition**, **trustworthy multimodal models**, **reinforcement learning**, and **autonomous agents**.
+**ZJU-OmniAI** at Zhejiang University builds AI **from the digital world to the physical world**: systems that **perceive**, **reason**, **act**, and **remember** in one closed loop. Our research spans **embodied intelligence**, **spatial cognition**, **trustworthy multimodal models**, **reinforcement learning**, and **autonomous agents**.
 
 <p align="center">
   <a href="#news"><b>News</b></a> ·
@@ -131,7 +131,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/research-map-dark.svg">
-  <img alt="OmniAI research map: embodied intelligence (embodied cerebellum, embodied brain, spatial intelligence and world models) and general-purpose AI (trustworthy multimodal, reasoning and reinforcement learning, autonomous agents) around the perceive, reason, remember, act loop" src="assets/research-map-light.svg" width="100%">
+  <img alt="OmniAI research map: from the digital world (trustworthy multimodal, reasoning and reinforcement learning, autonomous agents) to the physical world (spatial intelligence and world models, embodied brain, embodied cerebellum), around the perceive, reason, act, remember loop" src="assets/research-map-light.svg" width="100%">
 </picture>
 
 <a name="embodied-cerebellum"></a>

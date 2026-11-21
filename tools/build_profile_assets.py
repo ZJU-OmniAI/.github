@@ -65,8 +65,8 @@ ICONS: dict[str, str] = {
 PILLARS: list[tuple[str, str, str]] = [
     ('perceive', 'Perceive', '感知'),
     ('reason', 'Reason', '推理'),
-    ('remember', 'Remember', '记忆'),
     ('act', 'Act', '行动'),
+    ('remember', 'Remember', '记忆'),
 ]
 
 DIRECTIONS: list[dict[str, object]] = [
@@ -104,7 +104,7 @@ def svg_doc(w: int, h: int, title: str, body: str, defs: GlyphDefs, extra_defs: 
 
 
 def loop(t: Theme, cx: float, cy: float, orbit: float, node_r: float, ring_r: float, ring_w: float, uid: str) -> str:
-    """The perceive -> reason -> remember -> act cycle around the OmniAI ring."""
+    """The perceive -> reason -> act -> remember cycle around the OmniAI ring."""
     out: list[str] = []
     out.append(f'<circle cx="{cx}" cy="{cy}" r="{ring_r}" fill="none" stroke="url(#ring{uid})" stroke-width="{ring_w}"/>')
     out.append(f'<circle cx="{cx}" cy="{cy}" r="{ring_r - ring_w / 2 + 1.5}" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2"/>')
@@ -163,7 +163,7 @@ def banner(t: Theme) -> str:
     g.append(s)
     s, _ = text_baked('OmniAI', x - 6, 262, 148, 800, 'url(#wm)', letter_spacing=-4)
     g.append(s)
-    s, _ = text(defs, 'Embodied Intelligence & General-Purpose AI', x, 326, 33, 500, t.body)
+    s, _ = text(defs, 'From the Digital World to the Physical World', x, 326, 33, 500, t.body)
     g.append(s)
     cx = x
     for i, (key, label, _zh) in enumerate(PILLARS):
@@ -178,7 +178,7 @@ def banner(t: Theme) -> str:
             cx += 52
     g.append(f'<circle cx="1290" cy="240" r="205" fill="none" stroke="{t.border}" stroke-width="1.5" stroke-dasharray="3 9"/>')
     g.append(loop(t, 1290, 240, 160, 36, 84, 30, 'B'))
-    return svg_doc(W, H, 'ZJU-OmniAI: Embodied Intelligence and General-Purpose AI. Perceive, reason, remember, act.',
+    return svg_doc(W, H, 'ZJU-OmniAI: from the digital world to the physical world. Perceive, reason, act, remember.',
                    ''.join(g), defs, extra)
 
 
@@ -208,18 +208,26 @@ def research_map(t: Theme) -> str:
     g.append(f'<circle cx="{cx}" cy="{cy}" r="250" fill="url(#glow)"/>')
     col_x = {'L': 40, 'R': 1040}
     card_w, card_h, top, vgap = 520, 280, 108, 20
-    heads = [('L', '具身智能', 'EMBODIED INTELLIGENCE', t.directions[0]), ('R', '通用智能', 'GENERAL-PURPOSE AI', t.directions[4])]
+    heads = [('L', '数字世界', 'DIGITAL WORLD', t.directions[4]), ('R', '物理世界', 'PHYSICAL WORLD', t.directions[0])]
     for side, zh, en, color in heads:
         x0 = col_x[side] + 6
         s, w = text(defs, zh, x0, 76, 29, 800, t.ink)
         g.append(s)
         s, _ = text(defs, en, x0 + w + 16, 75, 19, 700, color, letter_spacing=2.6)
         g.append(s)
+    # digital -> physical arrow across the top of the centre column
+    s, _ = text(defs, '从数字世界到物理世界', cx, 74, 22, 700, t.ink, anchor='middle', letter_spacing=2)
+    g.append(s)
+    g.append(f'<linearGradient id="flow" gradientUnits="userSpaceOnUse" x1="{cx - 120}" y1="0" x2="{cx + 120}" y2="0">'
+             f'<stop offset="0" stop-color="{t.directions[4]}"/><stop offset="1" stop-color="{t.directions[0]}"/></linearGradient>')
+    g.append(f'<path d="M{cx - 120} 96H{cx + 116}" stroke="url(#flow)" stroke-width="3" stroke-linecap="round"/>'
+             f'<path d="M{cx + 106} 88l10 8-10 8" fill="none" stroke="{t.directions[0]}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
     outer = 212
+    # each column reads top to bottom as perceive -> reason -> act
+    layout = [('L', 0, 3), ('L', 1, 4), ('L', 2, 5), ('R', 0, 2), ('R', 1, 1), ('R', 2, 0)]
     g.append(f'<circle cx="{cx}" cy="{cy}" r="{outer}" fill="none" stroke="{t.border}" stroke-width="2" stroke-dasharray="3 9"/>')
-    for i, d in enumerate(DIRECTIONS):
-        side = 'L' if i < 3 else 'R'
-        row = i % 3
+    for side, row, i in layout:
+        d = DIRECTIONS[i]
         x0, y0 = col_x[side], top + row * (card_h + vgap)
         color = t.directions[i]
         # connector from card edge to the outer ring
@@ -234,10 +242,7 @@ def research_map(t: Theme) -> str:
         g.append(f'<rect x="{x0}" y="{y0}" width="{card_w}" height="{card_h}" rx="20" fill="{t.card}" stroke="{t.card_border}" stroke-width="1.6"/>')
         g.append(f'<circle cx="{ex}" cy="{ymid:.1f}" r="5" fill="{color}"/>')
         g.append(f'<rect x="{x0}" y="{y0 + 22}" width="5" height="{card_h - 44}" rx="2.5" fill="{color}"/>')
-        g.append(f'<rect x="{x0 + 28}" y="{y0 + 24}" width="64" height="40" rx="20" fill="{color}" fill-opacity=".13"/>')
-        s, _ = text(defs, str(d['no']), x0 + 60, y0 + 52, 21, 800, color, anchor='middle', letter_spacing=1)
-        g.append(s)
-        s, _ = text(defs, str(d['zh']), x0 + 108, y0 + 57, 34, 800, t.ink)
+        s, _ = text(defs, str(d['zh']), x0 + 30, y0 + 58, 34, 800, t.ink)
         g.append(s)
         s, _ = text(defs, str(d['en']), x0 + 30, y0 + 102, 18, 700, color, letter_spacing=2.2)
         g.append(s)
@@ -273,11 +278,11 @@ def research_map(t: Theme) -> str:
         g.append(s)
         s, _ = text(defs, zh, nx, ly + (-26 if above else 28), 19, 600, t.muted, anchor='middle', letter_spacing=2)
         g.append(s)
-    s, _ = text(defs, '从感知、推理、记忆到行动的智能闭环', cx, 900, 25, 600, t.ink, anchor='middle', letter_spacing=1)
+    s, _ = text(defs, '感知、推理、行动、记忆的智能闭环', cx, 900, 25, 600, t.ink, anchor='middle', letter_spacing=1)
     g.append(s)
-    s, _ = text(defs, 'Learning to perceive, reason, remember, and act', cx, 936, 19, 500, t.muted, anchor='middle')
+    s, _ = text(defs, 'PERCEIVE · REASON · ACT · REMEMBER', cx, 934, 17, 700, t.muted, anchor='middle')
     g.append(s)
-    return svg_doc(W, H, 'OmniAI research map: six research directions around the perceive, reason, remember, act loop',
+    return svg_doc(W, H, 'OmniAI research map: six research directions from the digital world to the physical world, around the perceive, reason, act, remember loop',
                    ''.join(g), defs, extra)
 
 
