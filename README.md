@@ -12,7 +12,7 @@ GitHub renders `profile/README.md` from the default branch of the public `ZJU-Om
 ## Page layout
 
 1. Banner, badges (organization stars, followers, and team model/dataset/total Hugging Face downloads), and a one-line introduction.
-2. **News**: dated one-line items tagged `PAPER`, `MEDIA`, or a venue. Keep the newest six or seven items visible and move older ones into *Earlier news*. Media items name the outlet, link the original article, and link the project page.
+2. **News**: media coverage only (no paper releases or acceptance notices). One line per article, newest first: month, the outlet as a code tag, the original article title linked, the project repository, and its project page.
 3. **Featured Projects**: six cards, each with a 16:9 cover, venue, model/dataset download badges where the project has official releases, a star badge, a one-sentence description, and links.
 4. **Research Map**: the generated overview figure, then one table per research direction. Every row keeps its model downloads, dataset downloads, and GitHub stars badges under the links; projects inside Embodied-Omni show the repository-wide `Embodied-Omni stars`. Reading lists and tools keep their star badges.
 5. **Tools for Research & Work**: research tools, kept separate from papers.
