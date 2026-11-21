@@ -2,18 +2,41 @@
 
 This repository maintains the public GitHub organization homepage at <https://github.com/ZJU-OmniAI>.
 
-- `profile/README.md`: the organization profile, with six research directions and recent highlights.
-- `assets/banner.svg`: the editable vector banner used by the profile.
+- `profile/README.md`: the organization profile.
+- `profile/assets/`: banner, research map, divider, and link buttons, each in a light and a dark version, plus project cover images in `covers/`.
+- `tools/`: the generator for those SVG graphics.
+- `metrics/` and `scripts/`: the automatically refreshed Hugging Face download totals.
 
-GitHub renders `profile/README.md` from the default branch of the public `ZJU-OmniAI/.github` repository. See [GitHub's organization-profile documentation](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile).
+GitHub renders `profile/README.md` from the default branch of the public `ZJU-OmniAI/.github` repository. Relative image paths resolve against `profile/`. See [GitHub's organization-profile documentation](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile).
+
+## Page layout
+
+1. Banner, badges (organization stars, followers, all-time Hugging Face downloads), and a one-line introduction.
+2. **News**: dated one-line items tagged `PAPER`, `MEDIA`, or a venue. Keep the newest six or seven items visible and move older ones into *Earlier news*. Media items name the outlet, link the original article, and link the project page.
+3. **Featured Projects**: six cards, each with a 16:9 cover, venue, star badge, Hugging Face download badge where the project has official releases, a one-sentence description, and links.
+4. **Research Map**: the generated overview figure, then one table per research direction.
+5. **Tools for Research & Work**: research tools, kept separate from papers.
+6. Footer with link buttons.
 
 ## Maintaining the profile
 
-1. Keep Recent Highlights to the five most recent research updates. Date paper releases by the public paper date and acceptance announcements by the confirmed announcement month.
+1. Date paper releases by the public paper date and acceptance announcements by the confirmed announcement month.
 2. Put each work in one primary research direction. Keep Reasoner, Navigator, and Memory-Bench within the Embodied-Omni series and link directly to their subdirectories.
 3. Add only publicly available paper, code, model, dataset, and project-page links. Resource collections belong below the relevant research table.
 4. Verify conference acceptance in the project's official repository or publication record. Use `arXiv YEAR` when no venue is confirmed.
-5. Keep tools for research and work separate from research papers. Edit the SVG directly to update branding.
+5. When a project is added or removed from a research direction, update `DIRECTIONS` in `tools/build_profile_assets.py` and rebuild the research map so the figure and the tables agree.
+6. Covers are 1200×675 JPEG files of about 150 KB or less, taken from each project's own page or repository figures.
+
+## Rebuilding the graphics
+
+Text in the SVGs is converted to outlines so it renders the same for every viewer. The generator uses Inter and Noto Sans SC (both SIL OFL 1.1) from the Fontsource packages `@fontsource-variable/inter` and `@fontsource-variable/noto-sans-sc`:
+
+```sh
+pip install fonttools brotli
+INTER_DIR=.../@fontsource-variable/inter/files \
+NOTO_SC_DIR=.../@fontsource-variable/noto-sans-sc/files \
+python3 tools/build_profile_assets.py
+```
 
 ## Suggested public repository pins
 
@@ -23,10 +46,10 @@ This selection places the two embodied directions first, followed by spatial cog
 
 ## Research scope
 
-The six directions are an editorial organization of the group's public work: Embodied Cerebellum; Embodied Brain; Spatial Intelligence & World Models; Trustworthy Multimodal Intelligence; Reasoning & Reinforcement Learning; Autonomous Agents & Tool Use.
+The six directions are an editorial organization of the group's public work, grouped as embodied intelligence (Embodied Cerebellum; Embodied Brain; Spatial Intelligence & World Models) and general-purpose AI (Trustworthy Multimodal Intelligence; Reasoning & Reinforcement Learning; Autonomous Agents & Tool Use).
 
 The current world-model entry is a reading resource. GFT studies LLM reasoning post-training; MGAP and OMNEX-VL study multimodal grounding/hallucination. They are placed in their respective learning and multimodal directions.
 
-VLA-Δ (action learning) and VLA-Rolling (efficient action-chunk inference) sit with VLA-Corrector under Embodied Cerebellum. Scene-Designer (agentic 3D scene generation) sits under Spatial Intelligence. DTCA (RL for diffusion language models) sits under Reasoning & RL; it has no arXiv version yet, so it links to the PDF on its project page and is labeled `Preprint 2026`.
+VLA-Δ (action learning) and VLA-Rolling (efficient action-chunk inference) sit with VLA-Corrector under Embodied Cerebellum. Scene-Designer (agentic 3D scene generation) sits under Spatial Intelligence. DTCA (RL for diffusion language models) sits under Reasoning & RL and links to arXiv 2610.35201.
 
-Source verification date: 2026-10-23. Project repositories and paper links are provided in the profile next to the corresponding work.
+Source verification date: 2026-11-21. Project repositories and paper links are provided in the profile next to the corresponding work.
