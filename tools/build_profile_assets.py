@@ -9,6 +9,7 @@ and rerun; never hand-edit the generated SVGs.
 from __future__ import annotations
 
 import math
+import re
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -59,6 +60,8 @@ ICONS: dict[str, str] = {
     'github': '<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
     'cube': '<path d="M12 2.5 3.5 7v10L12 21.5l8.5-4.5V7L12 2.5Z"/><path d="M3.5 7 12 11.5 20.5 7M12 11.5v10"/>',
     'mail': '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/>',
+    'people': '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.8"/><path d="M15.5 14.2A5.5 5.5 0 0 1 21.5 20"/>',
+    'home': '<path d="M3 11 12 4l9 7M5 10v10h5v-6h4v6h5V10"/>',
     'news': '<path d="M5 4h12v15a2 2 0 0 0 2 2H6a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1Z"/><path d="M17 8h3v11a2 2 0 0 1-2 2M8 8h5M8 12h5M8 16h3"/>',
 }
 
@@ -71,16 +74,22 @@ PILLARS: list[tuple[str, str, str]] = [
 
 DIRECTIONS: list[dict[str, object]] = [
     {'no': '01', 'zh': '具身小脑', 'en': 'EMBODIED CEREBELLUM', 'focus': '动作学习 · 高效执行 · 闭环纠错',
+     'tick': '动作学习、高效执行与闭环纠错，让机器人边做边纠错',
      'projects': ['VLA-Corrector', 'VLA-Δ', 'VLA-Rolling']},
     {'no': '02', 'zh': '具身大脑', 'en': 'EMBODIED BRAIN', 'focus': '推理规划 · 具身导航 · 长程记忆',
+     'tick': '推理规划、具身导航与长程记忆，完成长时程交互任务',
      'projects': ['Embodied-Reasoner', 'Embodied-Navigator', 'EmbodiedMemory-Bench']},
     {'no': '03', 'zh': '空间智能与世界模型', 'en': 'SPATIAL INTELLIGENCE & WORLD MODELS', 'focus': '交互中学空间 · 空间认知评测 · 3D 场景生成',
+     'tick': '从交互中理解空间，生成物理合理、功能正确的 3D 场景',
      'projects': ['Spatial-Interactor', 'ProVisE', 'Scene-Designer']},
     {'no': '04', 'zh': '可信多模态', 'en': 'TRUSTWORTHY MULTIMODAL', 'focus': '视觉对齐 · 抑制幻觉',
+     'tick': '视觉对齐与幻觉抑制，让判断忠实于视觉证据',
      'projects': ['MGAP', 'OMNEX-VL']},
     {'no': '05', 'zh': '推理与强化学习', 'en': 'REASONING & RL', 'focus': '推理后训练 · 扩散语言模型 RL · 代码生成',
+     'tick': '从模仿到奖励优化，覆盖自回归与扩散语言模型的推理后训练',
      'projects': ['GFT', 'DTCA', 'VeriRL']},
     {'no': '06', 'zh': '自主智能体', 'en': 'AUTONOMOUS AGENTS', 'focus': '策略自进化 · 工具调用 · 自动工作流',
+     'tick': '策略自进化、工具调用与自动工作流',
      'projects': ['Agent-Pro', 'Data-Copilot']},
 ]
 
@@ -88,6 +97,8 @@ LINKS: list[tuple[str, str, str]] = [
     ('repos', 'github', 'All Repositories'),
     ('huggingface', 'cube', 'Hugging Face'),
     ('news', 'news', 'News'),
+    ('people', 'people', 'People'),
+    ('home', 'home', 'Homepage'),
     ('contact', 'mail', 'Contact'),
 ]
 
@@ -98,15 +109,44 @@ def icon(name: str, cx: float, cy: float, size: float, color: str, width: float 
             f'stroke="{color}" stroke-width="{width / k:.2f}" stroke-linecap="round" stroke-linejoin="round">{ICONS[name]}</g>')
 
 
-def svg_doc(w: int, h: int, title: str, body: str, defs: GlyphDefs, extra_defs: str = '') -> str:
+# Shared motion. Everything stops for viewers who ask for reduced motion.
+MOTION_CSS = (
+    '.pulse{transform-box:fill-box;transform-origin:center;opacity:0;animation:pulse 8s ease-out infinite}'
+    '@keyframes pulse{0%{opacity:.95;transform:scale(1)}22%{opacity:0;transform:scale(1.85)}100%{opacity:0;transform:scale(1.85)}}'
+    '.orbit{transform-box:view-box;animation:orbit 8s linear infinite}'
+    '@keyframes orbit{from{transform:rotate(-135deg)}to{transform:rotate(225deg)}}'
+    '.spin{transform-box:fill-box;transform-origin:center;animation:spin 24s linear infinite}'
+    '@keyframes spin{to{transform:rotate(360deg)}}'
+    '.breathe{animation:breathe 5s ease-in-out infinite alternate}'
+    '@keyframes breathe{from{opacity:.5}to{opacity:1}}'
+    '.flow{animation:flow 1.4s linear infinite}'
+    '@keyframes flow{to{stroke-dashoffset:-24}}'
+    '.shine{animation:shine 7s ease-in-out 1s infinite}'
+    '@keyframes shine{0%{transform:translateX(0)}30%,100%{transform:translateX(980px)}}'
+    '.travel{animation:travel 3.2s ease-in-out infinite}'
+    '@keyframes travel{0%{transform:translateX(0);opacity:0}12%,88%{opacity:1}100%{transform:translateX(236px);opacity:0}}'
+    '.dot{transform-box:fill-box;transform-origin:center;animation:dot 4s ease-in-out infinite}'
+    '@keyframes dot{0%,40%,100%{transform:scale(1);opacity:.7}14%{transform:scale(1.75);opacity:1}}'
+    '.blink{animation:blink 1s step-end infinite}'
+    '@keyframes blink{50%{opacity:0}}'
+    '@media (prefers-reduced-motion: reduce){*{animation:none!important}.pulse{opacity:0}}'
+)
+
+
+def svg_doc(w: int, h: int, title: str, body: str, defs: GlyphDefs, extra_defs: str = '', motion: bool = True) -> str:
+    style = f'<style>{MOTION_CSS}</style>' if motion else ''
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" '
-            f'aria-label="{title}"><title>{title}</title><defs>{extra_defs}{defs.render_defs()}</defs>{body}</svg>\n')
+            f'aria-label="{title}"><title>{title}</title>{style}<defs>{extra_defs}{defs.render_defs()}</defs>{body}</svg>\n')
 
 
 def loop(t: Theme, cx: float, cy: float, orbit: float, node_r: float, ring_r: float, ring_w: float, uid: str) -> str:
-    """The perceive -> reason -> act -> remember cycle around the OmniAI ring."""
+    """The perceive -> reason -> act -> remember cycle around the OmniAI ring.
+
+    A light travels the orbit once every 8 s; each node pulses as the light reaches it.
+    """
     out: list[str] = []
-    out.append(f'<circle cx="{cx}" cy="{cy}" r="{ring_r}" fill="none" stroke="url(#ring{uid})" stroke-width="{ring_w}"/>')
+    out.append(f'<filter id="soft{uid}" x="-2" y="-2" width="5" height="5"><feGaussianBlur stdDeviation="5"/></filter>')
+    out.append(f'<circle class="spin" cx="{cx}" cy="{cy}" r="{ring_r}" fill="none" stroke="url(#ring{uid})" stroke-width="{ring_w}"/>')
     out.append(f'<circle cx="{cx}" cy="{cy}" r="{ring_r - ring_w / 2 + 1.5}" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2"/>')
     angles = [-135, -45, 45, 135]
     keys = [p[0] for p in PILLARS]
@@ -125,9 +165,19 @@ def loop(t: Theme, cx: float, cy: float, orbit: float, node_r: float, ring_r: fl
         tangent = math.degrees(mid) + 90
         out.append(f'<path d="M-7 -7 L5 0 L-7 7" transform="translate({mx:.1f} {my:.1f}) rotate({tangent:.1f})" fill="none" '
                    f'stroke="{c_to}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
-    for a, key in zip(angles, keys):
+    trail = []
+    for k in range(9):
+        a = math.radians(-k * 3.6)
+        trail.append(f'<circle cx="{cx + orbit * math.cos(a):.1f}" cy="{cy + orbit * math.sin(a):.1f}" r="{max(1.2, 5.6 - k * 0.5):.1f}" '
+                     f'fill="{t.ring[1]}" fill-opacity="{max(0.08, 0.85 - k * 0.1):.2f}"/>')
+    out.append(f'<g class="orbit" style="transform-origin:{cx}px {cy}px">'
+               f'<circle cx="{cx + orbit}" cy="{cy}" r="13" fill="{t.ring[1]}" fill-opacity=".55" filter="url(#soft{uid})"/>'
+               f'{"".join(trail)}<circle cx="{cx + orbit}" cy="{cy}" r="6" fill="#FFFFFF" stroke="{t.ring[0]}" stroke-width="2"/></g>')
+    for i, (a, key) in enumerate(zip(angles, keys)):
         nx, ny = cx + orbit * math.cos(math.radians(a)), cy + orbit * math.sin(math.radians(a))
         color = t.pillars[key]
+        out.append(f'<circle class="pulse" style="animation-delay:{i * 2}s" cx="{nx:.1f}" cy="{ny:.1f}" r="{node_r + 4}" '
+                   f'fill="none" stroke="{color}" stroke-width="3"/>')
         out.append(f'<circle cx="{nx:.1f}" cy="{ny:.1f}" r="{node_r + 7}" fill="{color}" fill-opacity=".12"/>')
         out.append(f'<circle cx="{nx:.1f}" cy="{ny:.1f}" r="{node_r}" fill="{t.card}" stroke="{color}" stroke-width="3"/>')
         out.append(icon(key, nx, ny, node_r * 1.05, color, 2.2))
@@ -154,7 +204,7 @@ def banner(t: Theme) -> str:
              + ring_gradient(t, 'B'))
     g.append(f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="28" fill="url(#bg)" stroke="{t.border}" stroke-width="2"/>')
     g.append(f'<rect x="1000" y="24" width="576" height="432" fill="url(#dots)"/>')
-    g.append('<circle cx="1290" cy="240" r="250" fill="url(#glow)"/>')
+    g.append('<circle class="breathe" cx="1290" cy="240" r="250" fill="url(#glow)"/>')
     x = 96
     s, w = text(defs, 'ZHEJIANG UNIVERSITY', x, 116, 21, 700, t.muted, letter_spacing=5)
     g.append(s)
@@ -163,11 +213,18 @@ def banner(t: Theme) -> str:
     g.append(s)
     s, _ = text_baked('OmniAI', x - 6, 262, 148, 800, 'url(#wm)', letter_spacing=-4)
     g.append(s)
+    wm_d = re.search(r' d="([^"]+)"', s).group(1)  # type: ignore[union-attr]
+    g.append(f'<clipPath id="wmclip"><path d="{wm_d}"/></clipPath>'
+             '<linearGradient id="shineg" x1="0" x2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>'
+             '<stop offset=".5" stop-color="#FFFFFF" stop-opacity=".65"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>'
+             '<g clip-path="url(#wmclip)"><g class="shine"><rect x="-190" y="130" width="150" height="160" fill="url(#shineg)" transform="skewX(-18)"/></g></g>')
     s, _ = text(defs, 'From the Digital World to the Physical World', x, 326, 33, 500, t.body)
     g.append(s)
     cx = x
     for i, (key, label, _zh) in enumerate(PILLARS):
         color = t.pillars[key]
+        g.append(f'<rect class="pulse" style="animation-delay:{i * 2}s" x="{cx - 3}" y="363" width="54" height="54" rx="15" '
+                 f'fill="none" stroke="{color}" stroke-width="3"/>')
         g.append(f'<rect x="{cx}" y="366" width="48" height="48" rx="13" fill="{color}"/>')
         g.append(icon(key, cx + 24, 390, 28, '#FFFFFF', 2.3))
         s, lw = text(defs, label, cx + 62, 399, 26, 700, t.ink)
@@ -205,7 +262,7 @@ def research_map(t: Theme) -> str:
              f'<stop offset="1" stop-color="{t.glow}" stop-opacity="0"/></radialGradient>' + ring_gradient(t, 'M'))
     g.append(f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="28" fill="url(#bg)" stroke="{t.border}" stroke-width="2"/>')
     cx, cy = 800, 534
-    g.append(f'<circle cx="{cx}" cy="{cy}" r="250" fill="url(#glow)"/>')
+    g.append(f'<circle class="breathe" cx="{cx}" cy="{cy}" r="250" fill="url(#glow)"/>')
     col_x = {'L': 40, 'R': 1040}
     card_w, card_h, top, vgap = 520, 280, 108, 20
     heads = [('L', '数字世界', 'DIGITAL WORLD', t.directions[4]), ('R', '物理世界', 'PHYSICAL WORLD', t.directions[0])]
@@ -221,7 +278,8 @@ def research_map(t: Theme) -> str:
     g.append(f'<linearGradient id="flow" gradientUnits="userSpaceOnUse" x1="{cx - 120}" y1="0" x2="{cx + 120}" y2="0">'
              f'<stop offset="0" stop-color="{t.directions[4]}"/><stop offset="1" stop-color="{t.directions[0]}"/></linearGradient>')
     g.append(f'<path d="M{cx - 120} 96H{cx + 116}" stroke="url(#flow)" stroke-width="3" stroke-linecap="round"/>'
-             f'<path d="M{cx + 106} 88l10 8-10 8" fill="none" stroke="{t.directions[0]}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
+             f'<path d="M{cx + 106} 88l10 8-10 8" fill="none" stroke="{t.directions[0]}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+             f'<circle class="travel" cx="{cx - 120}" cy="96" r="6" fill="{t.card}" stroke="{t.ring[0]}" stroke-width="2.5"/>')
     outer = 212
     # each column reads top to bottom as perceive -> reason -> act
     layout = [('L', 0, 3), ('L', 1, 4), ('L', 2, 5), ('R', 0, 2), ('R', 1, 1), ('R', 2, 0)]
@@ -237,7 +295,7 @@ def research_map(t: Theme) -> str:
         ex = x0 + card_w if side == 'L' else x0
         mx = (ex + tx) / 2
         g.append(f'<path d="M{ex} {ymid:.1f}C{mx:.1f} {ymid:.1f} {mx:.1f} {ty:.1f} {tx:.1f} {ty:.1f}" fill="none" stroke="{color}" '
-                 f'stroke-opacity=".6" stroke-width="2.2" stroke-dasharray="6 6"/>')
+                 f'stroke-opacity=".7" stroke-width="2.4" stroke-dasharray="6 6" class="flow"/>')
         g.append(f'<circle cx="{tx:.1f}" cy="{ty:.1f}" r="6" fill="{color}"/>')
         g.append(f'<rect x="{x0}" y="{y0}" width="{card_w}" height="{card_h}" rx="20" fill="{t.card}" stroke="{t.card_border}" stroke-width="1.6"/>')
         g.append(f'<circle cx="{ex}" cy="{ymid:.1f}" r="5" fill="{color}"/>')
@@ -289,13 +347,107 @@ def research_map(t: Theme) -> str:
 def divider(t: Theme) -> str:
     W, H = 1200, 28
     colors = [t.pillars[k] for k, _, _ in PILLARS]
+    light = t.ring[1]
     out = [f'<linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="{t.border}" stop-opacity="0"/><stop offset="1" stop-color="{t.border}"/></linearGradient>',
            f'<linearGradient id="r" x1="0" x2="1"><stop offset="0" stop-color="{t.border}"/><stop offset="1" stop-color="{t.border}" stop-opacity="0"/></linearGradient>']
     body = [f'<rect x="60" y="13" width="486" height="2" fill="url(#l)"/>', f'<rect x="654" y="13" width="486" height="2" fill="url(#r)"/>']
+    out.append(f'<linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="{light}" stop-opacity="0"/>'
+               f'<stop offset=".5" stop-color="{light}"/><stop offset="1" stop-color="{light}" stop-opacity="0"/></linearGradient>')
+    css = ('.beamL{animation:beamL 4s ease-in-out infinite}.beamR{animation:beamR 4s ease-in-out infinite}'
+           '@keyframes beamL{0%{transform:translateX(0);opacity:0}15%,80%{opacity:1}100%{transform:translateX(420px);opacity:0}}'
+           '@keyframes beamR{0%{transform:translateX(0);opacity:0}15%,80%{opacity:1}100%{transform:translateX(-420px);opacity:0}}')
+    body.append('<rect class="beamL" x="60" y="12.5" width="90" height="3" rx="1.5" fill="url(#beam)"/>')
+    body.append('<rect class="beamR" x="1050" y="12.5" width="90" height="3" rx="1.5" fill="url(#beam)"/>')
     for i, c in enumerate(colors):
-        body.append(f'<circle cx="{573 + i * 18}" cy="14" r="4.4" fill="{c}"/>')
+        body.append(f'<circle class="dot" style="animation-delay:{i}s" cx="{573 + i * 18}" cy="14" r="4.4" fill="{c}"/>')
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" aria-hidden="true">'
-            f'<defs>{"".join(out)}</defs>{"".join(body)}</svg>\n')
+            f'<style>{MOTION_CSS}{css}</style><defs>{"".join(out)}</defs>{"".join(body)}</svg>\n')
+
+
+def ticker(t: Theme) -> str:
+    """Typewriter line cycling through the six directions, digital world first."""
+    W, H, size, base = 1600, 76, 32, 50
+    per, type_dt, hold_until, erase_steps = 5.0, 0.055, 4.2, 6
+    order = [3, 4, 5, 2, 1, 0]
+    T = per * len(order)
+    defs = GlyphDefs(prefix='t')
+    g: list[str] = []
+    cursor_pts: list[tuple[float, float]] = []
+
+    def key(times: list[float]) -> str:
+        return ';'.join(f'{v / T:.5f}' for v in times)
+
+    for slot, i in enumerate(order):
+        d = DIRECTIONS[i]
+        color = t.directions[i]
+        parts = [(str(d['zh']), 800, color), (' · ', 500, t.muted), (str(d['tick']), 500, t.ink)]
+        widths = [measure(ch, size, w) for seg, w, _ in parts for ch in seg]
+        total = sum(widths)
+        x0 = (W - total) / 2
+        cum = [0.0]
+        for w in widths:
+            cum.append(cum[-1] + w)
+        start = slot * per
+        times, vals = [0.0], [0.0]
+        for k in range(1, len(widths) + 1):
+            times.append(start + k * type_dt)
+            vals.append(cum[k] + 2)
+        erase_at = start + hold_until
+        for j in range(1, erase_steps + 1):
+            times.append(erase_at + j * 0.06)
+            vals.append(cum[round(len(widths) * (1 - j / erase_steps))])
+        cursor_pts += [(start, x0)] + [(tm, x0 + v) for tm, v in zip(times[1:], vals[1:])]
+        g.append(f'<clipPath id="tc{slot}"><rect x="{x0:.1f}" y="0" width="0" height="{H}">'
+                 f'<animate attributeName="width" dur="{T}s" repeatCount="indefinite" calcMode="discrete" '
+                 f'keyTimes="{key(times)}" values="{";".join(f"{v:.1f}" for v in vals)}"/></rect></clipPath>')
+        x = x0
+        inner = []
+        for seg, w, c in parts:
+            m, sw = text(defs, seg, x, base, size, w, c)
+            inner.append(m)
+            x += sw
+        g.append(f'<g clip-path="url(#tc{slot})">{"".join(inner)}</g>')
+    cursor_pts.sort()
+    ct = [0.0] + [p[0] for p in cursor_pts if p[0] > 0]
+    cv = [cursor_pts[0][1]] + [p[1] for p in cursor_pts if p[0] > 0]
+    g.append(f'<rect class="blink" x="0" y="{base - 30}" width="3" height="38" rx="1.5" fill="{t.ring[0] if t.name == "light" else t.ring[1]}">'
+             f'<animate attributeName="x" dur="{T}s" repeatCount="indefinite" calcMode="discrete" '
+             f'keyTimes="{key(ct)}" values="{";".join(f"{v + 4:.1f}" for v in cv)}"/></rect>')
+    return svg_doc(W, H, 'Research directions: trustworthy multimodal, reasoning and RL, autonomous agents, spatial intelligence, embodied brain, embodied cerebellum',
+                   ''.join(g), defs)
+
+
+def people_banner(t: Theme) -> str:
+    W, H = 1600, 380
+    defs = GlyphDefs(prefix='q')
+    g: list[str] = []
+    extra = (f'<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{t.bg0}"/>'
+             f'<stop offset="1" stop-color="{t.bg1}"/></linearGradient>'
+             f'<radialGradient id="glow"><stop offset="0" stop-color="{t.glow}" stop-opacity=".75"/>'
+             f'<stop offset="1" stop-color="{t.glow}" stop-opacity="0"/></radialGradient>'
+             f'<linearGradient id="wm" gradientUnits="userSpaceOnUse" x1="96" y1="0" x2="560" y2="0">'
+             f'<stop offset="0" stop-color="{t.brand[0]}"/><stop offset=".55" stop-color="{t.brand[1]}"/>'
+             f'<stop offset="1" stop-color="{t.brand[2]}"/></linearGradient>'
+             f'<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="{t.muted}" fill-opacity=".22"/></pattern>'
+             + ring_gradient(t, 'P'))
+    g.append(f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="28" fill="url(#bg)" stroke="{t.border}" stroke-width="2"/>')
+    g.append(f'<rect x="1040" y="24" width="536" height="332" fill="url(#dots)"/>')
+    g.append('<circle class="breathe" cx="1300" cy="190" r="210" fill="url(#glow)"/>')
+    x = 96
+    s, w = text(defs, 'ZJU-OMNIAI', x, 108, 21, 700, t.muted, letter_spacing=5)
+    g.append(s)
+    g.append(f'<circle cx="{x + w + 18:.1f}" cy="101" r="3.5" fill="{t.brand[1]}"/>')
+    s, _ = text(defs, '浙江大学', x + w + 36, 108, 22, 600, t.muted, letter_spacing=3)
+    g.append(s)
+    s, pw = text_baked('People', x - 4, 224, 124, 800, 'url(#wm)', letter_spacing=-3)
+    g.append(s)
+    s, _ = text(defs, '团队成员', x + pw + 26, 224, 56, 700, t.ink, letter_spacing=4)
+    g.append(s)
+    s, _ = text(defs, 'From the Digital World to the Physical World', x, 290, 30, 500, t.body)
+    g.append(s)
+    g.append(f'<circle cx="1300" cy="190" r="168" fill="none" stroke="{t.border}" stroke-width="1.5" stroke-dasharray="3 9"/>')
+    g.append(loop(t, 1300, 190, 128, 30, 66, 24, 'P'))
+    return svg_doc(W, H, 'ZJU-OmniAI people', ''.join(g), defs, extra)
 
 
 def pill(t: Theme, icon_name: str, label: str, solid: bool = False) -> str:
@@ -318,6 +470,8 @@ def main() -> None:
         (OUT / f'banner-{t.name}.svg').write_text(banner(t))
         (OUT / f'research-map-{t.name}.svg').write_text(research_map(t))
         (OUT / f'divider-{t.name}.svg').write_text(divider(t))
+        (OUT / f'ticker-{t.name}.svg').write_text(ticker(t))
+        (OUT / f'people-banner-{t.name}.svg').write_text(people_banner(t))
         for slug, ic, label in LINKS:
             (OUT / 'links' / f'{slug}-{t.name}.svg').write_text(pill(t, ic, label, solid=(slug == 'contact')))
     for p in sorted(OUT.rglob('*.svg')):

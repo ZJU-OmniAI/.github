@@ -8,6 +8,13 @@
 </p>
 
 <p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ticker-dark.svg">
+  <img alt="Research directions: trustworthy multimodal, reasoning and RL, autonomous agents, spatial intelligence, embodied brain, embodied cerebellum" src="assets/ticker-light.svg" width="100%">
+</picture>
+</p>
+
+<p>
   <a href="https://github.com/orgs/ZJU-OmniAI/repositories"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-ZJU--OmniAI-181717?style=flat&logo=github&logoColor=white" align="top"></a>
   <a href="https://huggingface.co/OmniAI-ZJU"><img alt="Hugging Face" src="https://img.shields.io/badge/Hugging%20Face-OmniAI--ZJU-FFB000?style=flat&logo=huggingface&logoColor=white" align="top"></a>
   <a href="#news"><img alt="Media coverage" src="https://img.shields.io/badge/Media-%E9%87%8F%E5%AD%90%E4%BD%8D%20%C2%B7%20%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83%20%C2%B7%20%E6%96%B0%E6%99%BA%E5%85%83-07C160?style=flat&logo=wechat&logoColor=white" align="top"></a>
@@ -62,14 +69,14 @@
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/ZJU-OmniAI/Embodied-Omni"><img src="assets/covers/embodied-omni.jpg" alt="Embodied-Omni" width="100%"></a>
+<a href="https://github.com/ZJU-OmniAI/Embodied-Omni"><img src="assets/covers/embodied-omni.webp" alt="Embodied-Omni" width="100%"></a>
 <b><a href="https://github.com/ZJU-OmniAI/Embodied-Omni">Embodied-Omni</a></b> &nbsp;<code>ACL 2026 Main</code><br>
 <a href="https://raw.githubusercontent.com/ZJU-OmniAI/.github/hf-download-stats/downloads.json"><img alt="models downloads" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FZJU-OmniAI%2F.github%2Fhf-download-stats%2Fdownloads.json&amp;query=%24.groups%5B%22embodied-omni%22%5D.models&amp;label=models+downloads&amp;color=FFD21E&amp;logo=huggingface&amp;cacheSeconds=300" align="absmiddle"></a> <a href="https://raw.githubusercontent.com/ZJU-OmniAI/.github/hf-download-stats/downloads.json"><img alt="datasets downloads" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FZJU-OmniAI%2F.github%2Fhf-download-stats%2Fdownloads.json&amp;query=%24.groups%5B%22embodied-omni%22%5D.datasets&amp;label=datasets+downloads&amp;color=FFD21E&amp;logo=huggingface&amp;cacheSeconds=300" align="absmiddle"></a> <a href="https://github.com/ZJU-OmniAI/Embodied-Omni/stargazers"><img alt="Embodied-Omni GitHub stars" src="https://img.shields.io/github/stars/ZJU-OmniAI/Embodied-Omni?style=flat&amp;logo=github&amp;label=Embodied-Omni%20stars&amp;color=181717&amp;cacheSeconds=300" align="absmiddle"></a><br>
 <sub>Our embodied-brain series in one repository: <b>Embodied-Reasoner</b> plans and reflects, <b>Embodied-Navigator</b> points, thinks, and remembers on the move, and <b>EmbodiedMemory-Bench</b> tests long-horizon memory.</sub><br>
 <sub><a href="https://embodied-reasoner.github.io/">Reasoner</a> · <a href="https://zju-omniai.github.io/Embodied-Navigator/">Navigator</a> · <a href="https://zju-omniai.github.io/Embodied-Omni/EmbodiedMemoryBench/">Memory-Bench</a></sub>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/ZJU-OmniAI/vla-corrector"><img src="assets/covers/vla-corrector.jpg" alt="VLA-Corrector" width="100%"></a>
+<a href="https://github.com/ZJU-OmniAI/vla-corrector"><img src="assets/covers/vla-corrector.webp" alt="VLA-Corrector" width="100%"></a>
 <b><a href="https://github.com/ZJU-OmniAI/vla-corrector">VLA-Corrector</a></b> &nbsp;<code>NeurIPS 2026</code><br>
 <a href="https://github.com/ZJU-OmniAI/vla-corrector/stargazers"><img alt="vla-corrector GitHub stars" src="https://img.shields.io/github/stars/ZJU-OmniAI/vla-corrector?style=flat&amp;logo=github&amp;label=stars&amp;color=181717&amp;cacheSeconds=300" align="absmiddle"></a><br>
 <sub>A lightweight external corrector that watches for visual drift during action chunks, interrupts stale actions, and triggers replanning, so open-loop VLA policies recover instead of failing blindly.</sub><br>
@@ -78,14 +85,14 @@
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/ZJU-OmniAI/VLA-Delta"><img src="assets/covers/vla-delta.jpg" alt="VLA-Δ" width="100%"></a>
+<a href="https://github.com/ZJU-OmniAI/VLA-Delta"><img src="assets/covers/vla-delta.webp" alt="VLA-Δ" width="100%"></a>
 <b><a href="https://github.com/ZJU-OmniAI/VLA-Delta">VLA-Δ</a></b> &nbsp;<code>arXiv 2026</code><br>
 <a href="https://raw.githubusercontent.com/ZJU-OmniAI/.github/hf-download-stats/downloads.json"><img alt="models downloads" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FZJU-OmniAI%2F.github%2Fhf-download-stats%2Fdownloads.json&amp;query=%24.projects%5B%22vla-delta%22%5D.models&amp;label=models+downloads&amp;color=FFD21E&amp;logo=huggingface&amp;cacheSeconds=300" align="absmiddle"></a> <a href="https://github.com/ZJU-OmniAI/VLA-Delta/stargazers"><img alt="VLA-Delta GitHub stars" src="https://img.shields.io/github/stars/ZJU-OmniAI/VLA-Delta?style=flat&amp;logo=github&amp;label=stars&amp;color=181717&amp;cacheSeconds=300" align="absmiddle"></a><br>
 <sub>Don't just imitate actions, understand change: learns physical state transitions for robot control, with 98.4% on LIBERO and 68.0% across five real-robot tasks.</sub><br>
 <sub><a href="https://arxiv.org/abs/2610.21306">Paper</a> · <a href="https://zju-omniai.github.io/VLA-Delta/">Project</a> · <a href="https://huggingface.co/models?search=t0rn0d0/VLA-Delta">🤗 Models</a></sub>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/ZJU-OmniAI/Spatial-Interactor"><img src="assets/covers/spatial-interactor.jpg" alt="Spatial-Interactor" width="100%"></a>
+<a href="https://github.com/ZJU-OmniAI/Spatial-Interactor"><img src="assets/covers/spatial-interactor.webp" alt="Spatial-Interactor" width="100%"></a>
 <b><a href="https://github.com/ZJU-OmniAI/Spatial-Interactor">Spatial-Interactor</a></b> &nbsp;<code>arXiv 2026</code><br>
 <a href="https://raw.githubusercontent.com/ZJU-OmniAI/.github/hf-download-stats/downloads.json"><img alt="models downloads" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FZJU-OmniAI%2F.github%2Fhf-download-stats%2Fdownloads.json&amp;query=%24.projects%5B%22spatial-interactor%22%5D.models&amp;label=models+downloads&amp;color=FFD21E&amp;logo=huggingface&amp;cacheSeconds=300" align="absmiddle"></a> <a href="https://huggingface.co/datasets/kagakouko/LSI-108K"><img alt="dataset downloads" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2Fkagakouko%2FLSI-108K%3Fexpand%255B%255D%3DdownloadsAllTime&amp;query=%24.downloadsAllTime&amp;label=dataset+downloads&amp;color=FFD21E&amp;logo=huggingface&amp;cacheSeconds=300" align="absmiddle"></a> <a href="https://github.com/ZJU-OmniAI/Spatial-Interactor/stargazers"><img alt="Spatial-Interactor GitHub stars" src="https://img.shields.io/github/stars/ZJU-OmniAI/Spatial-Interactor?style=flat&amp;logo=github&amp;label=stars&amp;color=181717&amp;cacheSeconds=300" align="absmiddle"></a><br>
 <sub>The world responds: learns spatial reasoning from motion and interaction, covering local state transitions and long-horizon reasoning in real and simulated trajectories.</sub><br>
@@ -94,7 +101,7 @@
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/ZJU-OmniAI/Scene-Designer"><img src="assets/covers/scene-designer.jpg" alt="Scene-Designer" width="100%"></a>
+<a href="https://github.com/ZJU-OmniAI/Scene-Designer"><img src="assets/covers/scene-designer.webp" alt="Scene-Designer" width="100%"></a>
 <b><a href="https://github.com/ZJU-OmniAI/Scene-Designer">Scene-Designer</a></b> &nbsp;<code>arXiv 2026</code><br>
 <a href="https://huggingface.co/XuanyuLiu/Scene-Builder-Qwen3-VL-8B-Instruct"><img alt="model downloads" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2FXuanyuLiu%2FScene-Builder-Qwen3-VL-8B-Instruct%3Fexpand%255B%255D%3DdownloadsAllTime&amp;query=%24.downloadsAllTime&amp;label=model+downloads&amp;color=FFD21E&amp;logo=huggingface&amp;cacheSeconds=300" align="absmiddle"></a> <a href="https://huggingface.co/datasets/XuanyuLiu/Scene-OTC-Bench"><img alt="dataset downloads" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FXuanyuLiu%2FScene-OTC-Bench%3Fexpand%255B%255D%3DdownloadsAllTime&amp;query=%24.downloadsAllTime&amp;label=dataset+downloads&amp;color=FFD21E&amp;logo=huggingface&amp;cacheSeconds=300" align="absmiddle"></a> <a href="https://github.com/ZJU-OmniAI/Scene-Designer/stargazers"><img alt="Scene-Designer GitHub stars" src="https://img.shields.io/github/stars/ZJU-OmniAI/Scene-Designer?style=flat&amp;logo=github&amp;label=stars&amp;color=181717&amp;cacheSeconds=300" align="absmiddle"></a><br>
 <sub>Design intelligence for agentic 3D scene generation: build physically valid, functionally correct scenes, critique them, and refine with Critic-guided Scene-GRPO.</sub><br>
