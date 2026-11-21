@@ -46,7 +46,7 @@ This selection places the two embodied directions first, followed by spatial cog
 
 ## Research scope
 
-The six directions are an editorial organization of the group's public work, grouped as embodied intelligence (Embodied Cerebellum; Embodied Brain; Spatial Intelligence & World Models) and general-purpose AI (Trustworthy Multimodal Intelligence; Reasoning & Reinforcement Learning; Autonomous Agents & Tool Use).
+OmniAI's positioning is **from the digital world to the physical world**, with the loop **perceive → reason → act → remember** (keep this order in every graphic and sentence). The six directions are an editorial organization of the group's public work. In the research map they are grouped as the digital world (Trustworthy Multimodal Intelligence; Reasoning & Reinforcement Learning; Autonomous Agents & Tool Use) and the physical world (Spatial Intelligence & World Models; Embodied Brain; Embodied Cerebellum), each column read top to bottom as perceive, reason, act. The tables below the map keep the embodied directions first because the embodied cerebellum and embodied brain are the group's main line.
 
 The current world-model entry is a reading resource. GFT studies LLM reasoning post-training; MGAP and OMNEX-VL study multimodal grounding/hallucination. They are placed in their respective learning and multimodal directions.
 
