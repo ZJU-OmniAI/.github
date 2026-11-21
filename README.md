@@ -25,7 +25,7 @@ GitHub renders `profile/README.md` from the default branch of the public `ZJU-Om
 3. Add only publicly available paper, code, model, dataset, and project-page links. Resource collections belong below the relevant research table.
 4. Verify conference acceptance in the project's official repository or publication record. Use `arXiv YEAR` when no venue is confirmed.
 5. When a project is added or removed from a research direction, update `DIRECTIONS` in `tools/build_profile_assets.py` and rebuild the research map so the figure and the tables agree.
-6. Covers are 1200×675 JPEG files of about 150 KB or less, taken from each project's own page or repository figures.
+6. Covers are 16:9. Prefer an 8-second looping animated WebP (640×360, 12 fps, about 2 MB or less) cut from the group's own real-robot or real-deployment footage that shows the technical difficulty (for example real-environment navigation, dual-arm parcel handling, multi-task real-robot montages). Avoid toy-like tabletop clips or AI-generated footage when real footage exists. Never use footage filmed by partner companies or third parties. Projects without suitable video keep a 1200×675 JPEG figure.
 
 ## Rebuilding the graphics
 
