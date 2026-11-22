@@ -167,7 +167,7 @@ def face_svg(t: Theme, p: Person) -> str:
 
 
 def member_card(t: Theme, p: Person, idx: int, group_role: str) -> str:
-    """Portrait, name, "PhD · 2024" line and projects; shown at 170 px wide in the grid."""
+    """Portrait, name, "PhD · 2024" line and projects; shown 152 px wide, five to a row at 1280 px."""
     W, H, S = 340, 424, 272
     defs = GlyphDefs(prefix='c')
     ax = (W - S) / 2
@@ -351,14 +351,14 @@ def faculty_cell(p: Person, width: int) -> str:
     if p.get('email'):
         lines.append(f'<sub>{html.escape(str(p["email"]).replace("@", " [AT] "))}</sub><br>')
     lines.append(icons(p))
-    lines.append('<br><img src="../profile/assets/spacer.svg" alt="" width="250" height="1">')
+    lines.append('<br><img src="../profile/assets/spacer.svg" alt="" width="400" height="1">')
     return f'<td valign="top" width="{width}%">\n' + '\n'.join(lines) + '\n</td>'
 
 
 def member_link(p: Person) -> str:
     sl = slug(str(p['name']))
     alt = str(p['name']) + (f' ({p["name_zh"]})' if p.get('name_zh') else '')
-    pic = picture(f'assets/cards/{sl}', alt, 'width="170"')
+    pic = picture(f'assets/cards/{sl}', alt, 'width="152"')
     href = primary_link(p)
     return f'<a href="{html.escape(href)}" title="{html.escape(alt)}">{pic}</a>' if href else pic
 
@@ -374,7 +374,7 @@ def build(data: dict[str, object]) -> str:
            '<p align="right">', '&nbsp;\n'.join(nav), '</p>', '',
            f'<p>{picture("assets/hero", hero_alt, FULL)}</p>', '']
     if data.get('note'):
-        out += [f'<p align="right"><sub>{html.escape(str(data["note"]))}</sub></p>', '']
+        out += [f'<p><sub>{html.escape(str(data["note"]))}</sub></p>', '']
     for group in data.get('groups') or []:  # type: ignore[union-attr]
         members = group.get('members') or []
         if not members:

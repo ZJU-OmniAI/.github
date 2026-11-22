@@ -9,7 +9,7 @@
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg"><img alt="ZJU-OmniAI People. ZJU-OmniAI is a research team at Zhejiang University. Faculty, PhD and master&#x27;s students build AI from the digital world to the physical world: systems that perceive, reason, act, and remember. 浙江大学 OmniAI 团队，从数字世界到物理世界，研究感知、推理、行动、记忆的智能闭环。" src="assets/hero-light.svg" width="100%"></picture></p>
 
-<p align="right"><sub>成员按姓氏字母排序；照片与成员信息陆续更新中 · Members are listed by family name; photos and details are being updated.</sub></p>
+<p><sub>成员按姓氏排序，照片与信息陆续更新中 · Listed by family name; photos and details coming soon.</sub></p>
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/section-faculty-dark.svg"><img alt="Faculty · 教员" src="assets/section-faculty-light.svg" width="100%"></picture></p>
 
@@ -20,7 +20,7 @@
 <b>Xuhong Zhang · 张旭鸿</b><br>
 <sub>Faculty · Zhejiang University</sub><br>
 <a href="https://scholar.google.com/citations?user=bWLpm3sAAAAJ" title="Google Scholar"><img src="../profile/assets/icons/scholar.svg" alt="Google Scholar" width="18" height="18"></a>&nbsp;&nbsp;<a href="https://github.com/zhangxuhong" title="GitHub"><img src="../profile/assets/icons/github.svg" alt="GitHub" width="18" height="18"></a>
-<br><img src="../profile/assets/spacer.svg" alt="" width="250" height="1">
+<br><img src="../profile/assets/spacer.svg" alt="" width="400" height="1">
 </td>
 <td valign="top" width="50%">
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/faces/wenqi-zhang-dark.svg"><img alt="Wenqi Zhang" src="assets/faces/wenqi-zhang-light.svg" align="left" width="112"></picture>
@@ -28,7 +28,7 @@
 <sub>Faculty · Zhejiang University</sub><br>
 <sub>zhangwenqi [AT] zju.edu.cn</sub><br>
 <a href="https://zwq2018.github.io/" title="Homepage"><img src="../profile/assets/icons/homepage.svg" alt="Homepage" width="18" height="18"></a>&nbsp;&nbsp;<a href="https://scholar.google.com/citations?user=C6Bmfw8AAAAJ" title="Google Scholar"><img src="../profile/assets/icons/scholar.svg" alt="Google Scholar" width="18" height="18"></a>&nbsp;&nbsp;<a href="https://github.com/zwq2018" title="GitHub"><img src="../profile/assets/icons/github.svg" alt="GitHub" width="18" height="18"></a>&nbsp;&nbsp;<a href="mailto:zhangwenqi@zju.edu.cn" title="Email"><img src="../profile/assets/icons/email.svg" alt="Email" width="18" height="18"></a>
-<br><img src="../profile/assets/spacer.svg" alt="" width="250" height="1">
+<br><img src="../profile/assets/spacer.svg" alt="" width="400" height="1">
 </td>
 </tr>
 </table>
@@ -36,25 +36,25 @@
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/section-phd-students-dark.svg"><img alt="PhD Students · 博士生" src="assets/section-phd-students-light.svg" width="100%"></picture></p>
 
 <p>
-<a href="https://github.com/chensunlai" title="Sunlai Chen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/sunlai-chen-dark.svg"><img alt="Sunlai Chen" src="assets/cards/sunlai-chen-light.svg" width="170"></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/qinfeng-li-dark.svg"><img alt="Qinfeng Li" src="assets/cards/qinfeng-li-light.svg" width="170"></picture>
-<a href="https://pm1255.github.io/" title="Miao Pan (潘淼)"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/miao-pan-dark.svg"><img alt="Miao Pan (潘淼)" src="assets/cards/miao-pan-light.svg" width="170"></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/kaixiang-yao-dark.svg"><img alt="Kaixiang Yao" src="assets/cards/kaixiang-yao-light.svg" width="170"></picture>
+<a href="https://github.com/chensunlai" title="Sunlai Chen"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/sunlai-chen-dark.svg"><img alt="Sunlai Chen" src="assets/cards/sunlai-chen-light.svg" width="152"></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/qinfeng-li-dark.svg"><img alt="Qinfeng Li" src="assets/cards/qinfeng-li-light.svg" width="152"></picture>
+<a href="https://pm1255.github.io/" title="Miao Pan (潘淼)"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/miao-pan-dark.svg"><img alt="Miao Pan (潘淼)" src="assets/cards/miao-pan-light.svg" width="152"></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/kaixiang-yao-dark.svg"><img alt="Kaixiang Yao" src="assets/cards/kaixiang-yao-light.svg" width="152"></picture>
 </p>
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/section-master-s-students-dark.svg"><img alt="Master&#x27;s Students · 硕士生" src="assets/section-master-s-students-light.svg" width="100%"></picture></p>
 
 <p>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/hongze-chen-dark.svg"><img alt="Hongze Chen" src="assets/cards/hongze-chen-light.svg" width="170"></picture>
-<a href="https://github.com/fhylove" title="Hongyan Feng"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/hongyan-feng-dark.svg"><img alt="Hongyan Feng" src="assets/cards/hongyan-feng-light.svg" width="170"></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/sicheng-he-dark.svg"><img alt="Sicheng He" src="assets/cards/sicheng-he-light.svg" width="170"></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/jiaming-huang-dark.svg"><img alt="Jiaming Huang" src="assets/cards/jiaming-huang-light.svg" width="170"></picture>
-<a href="https://github.com/llz1515" title="Lizhou Liang"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/lizhou-liang-dark.svg"><img alt="Lizhou Liang" src="assets/cards/lizhou-liang-light.svg" width="170"></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/xuanyu-liu-dark.svg"><img alt="Xuanyu Liu" src="assets/cards/xuanyu-liu-light.svg" width="170"></picture>
-<a href="https://github.com/Baixiaochi9449" title="Qi Lu"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/qi-lu-dark.svg"><img alt="Qi Lu" src="assets/cards/qi-lu-light.svg" width="170"></picture></a>
-<a href="https://github.com/YiPan-ECLab" title="Yi Pan"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/yi-pan-dark.svg"><img alt="Yi Pan" src="assets/cards/yi-pan-light.svg" width="170"></picture></a>
-<a href="https://xuwang917.github.io/" title="Xu Wang (王旭)"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/xu-wang-dark.svg"><img alt="Xu Wang (王旭)" src="assets/cards/xu-wang-light.svg" width="170"></picture></a>
-<a href="https://github.com/DawnChase" title="Xiaohe Zhou"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/xiaohe-zhou-dark.svg"><img alt="Xiaohe Zhou" src="assets/cards/xiaohe-zhou-light.svg" width="170"></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/hongze-chen-dark.svg"><img alt="Hongze Chen" src="assets/cards/hongze-chen-light.svg" width="152"></picture>
+<a href="https://github.com/fhylove" title="Hongyan Feng"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/hongyan-feng-dark.svg"><img alt="Hongyan Feng" src="assets/cards/hongyan-feng-light.svg" width="152"></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/sicheng-he-dark.svg"><img alt="Sicheng He" src="assets/cards/sicheng-he-light.svg" width="152"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/jiaming-huang-dark.svg"><img alt="Jiaming Huang" src="assets/cards/jiaming-huang-light.svg" width="152"></picture>
+<a href="https://github.com/llz1515" title="Lizhou Liang"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/lizhou-liang-dark.svg"><img alt="Lizhou Liang" src="assets/cards/lizhou-liang-light.svg" width="152"></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/xuanyu-liu-dark.svg"><img alt="Xuanyu Liu" src="assets/cards/xuanyu-liu-light.svg" width="152"></picture>
+<a href="https://github.com/Baixiaochi9449" title="Qi Lu"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/qi-lu-dark.svg"><img alt="Qi Lu" src="assets/cards/qi-lu-light.svg" width="152"></picture></a>
+<a href="https://github.com/YiPan-ECLab" title="Yi Pan"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/yi-pan-dark.svg"><img alt="Yi Pan" src="assets/cards/yi-pan-light.svg" width="152"></picture></a>
+<a href="https://xuwang917.github.io/" title="Xu Wang (王旭)"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/xu-wang-dark.svg"><img alt="Xu Wang (王旭)" src="assets/cards/xu-wang-light.svg" width="152"></picture></a>
+<a href="https://github.com/DawnChase" title="Xiaohe Zhou"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/xiaohe-zhou-dark.svg"><img alt="Xiaohe Zhou" src="assets/cards/xiaohe-zhou-light.svg" width="152"></picture></a>
 </p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="../profile/assets/divider-dark.svg"><img alt="" src="../profile/assets/divider-light.svg" width="100%"></picture>
