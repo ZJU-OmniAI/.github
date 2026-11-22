@@ -4,10 +4,12 @@
     python3 tools/watermark_covers.py FRAME_DIR OUT.webp
 
 FRAME_DIR holds the clip as 640x360 PNG frames at 12 fps (cut with ffmpeg).
-Two marks are added so a crop cannot remove both:
-  * a fixed badge (ring logo + "ZJU-OmniAI Lab") in the bottom-right corner;
-  * a translucent mark that drifts across the frame on a closed path whose
-    period equals the clip length, so the loop stays seamless.
+Three layers, so neither cropping nor patching one spot removes the mark:
+  * a slanted, staggered grid of small translucent marks over the whole frame
+    that slides diagonally by exactly one lattice step per clip;
+  * two larger translucent marks drifting on different closed paths;
+  * a fixed badge (ring logo + "ZJU-OmniAI Lab") in the bottom-right corner.
+Every motion completes a whole period per clip, so the loop stays seamless.
 Requires img2webp (libwebp) on PATH.
 """
 from __future__ import annotations
@@ -80,18 +82,44 @@ def badge(height: int, alpha: int, plate: bool) -> Image.Image:
     return im
 
 
+TILE_DX, TILE_ROW = 230, 92  # staggered lattice: rows shift by TILE_DX/2
+
+
+def tile_layer(W: int, H: int) -> tuple[Image.Image, int]:
+    """Staggered grid of slanted marks, with a margin so any lattice offset can be cropped."""
+    mark = badge(20, 80, plate=False).rotate(16, expand=True, resample=Image.BICUBIC)
+    margin = TILE_DX + mark.width
+    layer = Image.new('RGBA', (W + 2 * margin, H + 2 * margin), (0, 0, 0, 0))
+    rows = layer.height // TILE_ROW + 2
+    cols = layer.width // TILE_DX + 2
+    for r in range(rows):
+        shift = TILE_DX // 2 if r % 2 else 0
+        for c in range(cols):
+            x, y = c * TILE_DX + shift, r * TILE_ROW
+            if x + mark.width <= layer.width and y + mark.height <= layer.height:
+                layer.alpha_composite(mark, (x, y))
+    return layer, margin
+
+
 def stamp(frames: list[Path], out_dir: Path) -> None:
     corner = badge(28, 235, plate=True)
-    drift = badge(30, 95, plate=False)
+    drift_a = badge(30, 120, plate=False)
+    drift_b = badge(24, 110, plate=False)
     n = len(frames)
+    W, H = Image.open(frames[0]).size
+    tiles, margin = tile_layer(W, H)
     for i, fp in enumerate(frames):
         im = Image.open(fp).convert('RGBA')
-        W, H = im.size
+        k = i / n
+        # one lattice step (TILE_DX/2, TILE_ROW) per clip maps the grid onto itself
+        ox, oy = margin - int(TILE_DX / 2 * k), margin - int(TILE_ROW * k)
+        im.alpha_composite(tiles.crop((ox, oy, ox + W, oy + H)))
+        phase = 2 * math.pi * k
+        for mark, fx, fy, px, py in ((drift_a, 1, 2, 0.0, 0.6), (drift_b, -1, 3, 2.1, 1.3)):
+            x = (W - mark.width) / 2 + (W - mark.width) * 0.42 * math.sin(fx * phase + px)
+            y = (H - mark.height) / 2 + (H - mark.height) * 0.38 * math.sin(fy * phase + py)
+            im.alpha_composite(mark, (int(x), int(y)))
         im.alpha_composite(corner, (W - corner.width - 10, H - corner.height - 10))
-        phase = 2 * math.pi * i / n  # one closed lap per clip, so the loop is seamless
-        x = (W - drift.width) / 2 + (W - drift.width) * 0.42 * math.sin(phase)
-        y = (H - drift.height) / 2 + (H - drift.height) * 0.36 * math.sin(2 * phase + 0.6)
-        im.alpha_composite(drift, (int(x), int(y)))
         im.convert('RGB').save(out_dir / fp.name)
 
 
