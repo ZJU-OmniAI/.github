@@ -417,39 +417,6 @@ def ticker(t: Theme) -> str:
                    ''.join(g), defs)
 
 
-def people_banner(t: Theme) -> str:
-    W, H = 1600, 380
-    defs = GlyphDefs(prefix='q')
-    g: list[str] = []
-    extra = (f'<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{t.bg0}"/>'
-             f'<stop offset="1" stop-color="{t.bg1}"/></linearGradient>'
-             f'<radialGradient id="glow"><stop offset="0" stop-color="{t.glow}" stop-opacity=".75"/>'
-             f'<stop offset="1" stop-color="{t.glow}" stop-opacity="0"/></radialGradient>'
-             f'<linearGradient id="wm" gradientUnits="userSpaceOnUse" x1="96" y1="0" x2="560" y2="0">'
-             f'<stop offset="0" stop-color="{t.brand[0]}"/><stop offset=".55" stop-color="{t.brand[1]}"/>'
-             f'<stop offset="1" stop-color="{t.brand[2]}"/></linearGradient>'
-             f'<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="{t.muted}" fill-opacity=".22"/></pattern>'
-             + ring_gradient(t, 'P'))
-    g.append(f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="28" fill="url(#bg)" stroke="{t.border}" stroke-width="2"/>')
-    g.append(f'<rect x="1040" y="24" width="536" height="332" fill="url(#dots)"/>')
-    g.append('<circle class="breathe" cx="1300" cy="190" r="210" fill="url(#glow)"/>')
-    x = 96
-    s, w = text(defs, 'ZJU-OMNIAI', x, 108, 21, 700, t.muted, letter_spacing=5)
-    g.append(s)
-    g.append(f'<circle cx="{x + w + 18:.1f}" cy="101" r="3.5" fill="{t.brand[1]}"/>')
-    s, _ = text(defs, '浙江大学', x + w + 36, 108, 22, 600, t.muted, letter_spacing=3)
-    g.append(s)
-    s, pw = text_baked('People', x - 4, 224, 124, 800, 'url(#wm)', letter_spacing=-3)
-    g.append(s)
-    s, _ = text(defs, '团队成员', x + pw + 26, 224, 56, 700, t.ink, letter_spacing=4)
-    g.append(s)
-    s, _ = text(defs, 'From the Digital World to the Physical World', x, 290, 30, 500, t.body)
-    g.append(s)
-    g.append(f'<circle cx="1300" cy="190" r="168" fill="none" stroke="{t.border}" stroke-width="1.5" stroke-dasharray="3 9"/>')
-    g.append(loop(t, 1300, 190, 128, 30, 66, 24, 'P'))
-    return svg_doc(W, H, 'ZJU-OmniAI people', ''.join(g), defs, extra)
-
-
 def pill(t: Theme, icon_name: str, label: str, solid: bool = False) -> str:
     defs = GlyphDefs(prefix='p')
     color = t.brand[0] if t.name == 'light' else t.brand[1]
@@ -471,7 +438,6 @@ def main() -> None:
         (OUT / f'research-map-{t.name}.svg').write_text(research_map(t))
         (OUT / f'divider-{t.name}.svg').write_text(divider(t))
         (OUT / f'ticker-{t.name}.svg').write_text(ticker(t))
-        (OUT / f'people-banner-{t.name}.svg').write_text(people_banner(t))
         for slug, ic, label in LINKS:
             (OUT / 'links' / f'{slug}-{t.name}.svg').write_text(pill(t, ic, label, solid=(slug == 'contact')))
     for p in sorted(OUT.rglob('*.svg')):
