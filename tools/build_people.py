@@ -146,6 +146,8 @@ def card(p: dict[str, object], group_role: str, width: int, avatar_w: int, big: 
     icons = links(p, 20 if big else 18)
     if icons:
         parts.append(icons)
+    if big:  # GitHub sizes tables to their content; an invisible spacer lets featured cards share the full width
+        parts.append('<br><img src="../profile/assets/spacer.svg" alt="" width="380" height="1">')
     return f'<td align="center" valign="top" width="{width}%">{"".join(parts)}</td>'
 
 
