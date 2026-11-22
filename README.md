@@ -6,6 +6,7 @@ This repository maintains the public GitHub organization homepage at <https://gi
 - `profile/assets/`: banner, research map, divider, and link buttons, each in a light and a dark version, plus project cover images in `covers/`.
 - `tools/`: the generator for those SVG graphics.
 - `metrics/` and `scripts/`: the automatically refreshed Hugging Face download totals.
+- `people/`: the people page (`people/README.md`), generated from `people/people.json` by `python3 tools/build_people.py`. Put photos in `people/photos/` and set each person's `photo` to the file name; people without a photo show a shared placeholder. Fields: name, name_zh, title, role, year, works, homepage, scholar, github, email. The homepage links to it from the navigation row and the footer.
 
 GitHub renders `profile/README.md` from the default branch of the public `ZJU-OmniAI/.github` repository. Relative image paths resolve against `profile/`. See [GitHub's organization-profile documentation](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile).
 
