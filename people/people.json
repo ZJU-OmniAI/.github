@@ -1,0 +1,40 @@
+{
+  "intro": "**ZJU-OmniAI** at Zhejiang University builds AI **from the digital world to the physical world**: systems that perceive, reason, act, and remember. Members are listed by family name with their representative projects.",
+  "intro_zh": "浙江大学 OmniAI 团队，从数字世界到物理世界，研究感知、推理、行动、记忆的智能闭环。成员按姓氏字母排序，并列出代表项目。",
+  "note": "照片与成员信息陆续更新中 · Photos and member details are being updated.",
+  "contact": "zhangwenqi@zju.edu.cn",
+  "groups": [
+    {
+      "title": "Faculty · 指导教师",
+      "role": "Zhejiang University",
+      "featured": true,
+      "columns": 2,
+      "members": [
+        {"name": "Xuhong Zhang", "name_zh": "张旭鸿"},
+        {"name": "Wenqi Zhang", "name_zh": "张文祺", "homepage": "https://zwq2018.github.io/", "scholar": "https://scholar.google.com/citations?user=C6Bmfw8AAAAJ", "github": "zwq2018", "email": "zhangwenqi@zju.edu.cn"}
+      ]
+    },
+    {
+      "title": "Members · 团队成员",
+      "members": [
+        {"name": "Hongze Chen", "works": ["DTCA"]},
+        {"name": "Sunlai Chen", "works": ["Embodied-Navigator", "Scene-Designer"], "github": "chensunlai"},
+        {"name": "Hongyan Feng", "works": ["Embodied-Navigator"], "github": "fhylove"},
+        {"name": "Sicheng He", "works": ["VLA-Rolling"]},
+        {"name": "Jiaming Huang", "works": ["VLA-Rolling", "VLA-Corrector"]},
+        {"name": "Qinfeng Li", "works": ["EmbodiedMemory-Bench", "DTCA"]},
+        {"name": "Lizhou Liang", "works": ["EmbodiedMemory-Bench"], "github": "llz1515"},
+        {"name": "Xuanyu Liu", "works": ["Scene-Designer"]},
+        {"name": "Qi Lu", "works": ["VLA-Δ"], "github": "Baixiaochi9449"},
+        {"name": "Miao Pan", "works": ["VLA-Corrector", "VeriRL"]},
+        {"name": "Yi Pan", "works": ["VLA-Corrector"], "github": "YiPan-ECLab"},
+        {"name": "Fu Teng", "works": ["VeriRL"], "github": "txiaoxiaofu"},
+        {"name": "Xu Wang", "works": ["ProVisE"], "github": "XuWang917", "homepage": "https://xuwang917.github.io/"},
+        {"name": "Kaixiang Yao", "works": ["Spatial-Interactor"]},
+        {"name": "Xiaohe Zhou", "works": ["EmbodiedMemory-Bench", "ProVisE"]},
+        {"name": "Yingxuan Zhuang", "works": ["MGAP"], "github": "IzayoiSakuya111"}
+      ]
+    }
+  ],
+  "alumni": []
+}

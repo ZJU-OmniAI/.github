@@ -45,6 +45,7 @@
   <a href="#featured"><b>Featured Projects</b></a> ·
   <a href="#research"><b>Research Map</b></a> ·
   <a href="#tools"><b>Tools</b></a> ·
+  <a href="https://github.com/ZJU-OmniAI/.github/blob/main/people/README.md"><b>People · 团队成员</b></a> ·
   <a href="https://github.com/orgs/ZJU-OmniAI/repositories"><b>All Repositories</b></a>
 </p>
 
@@ -240,5 +241,6 @@ Find our work useful? A ⭐ on the repository helps others discover it.<br>
 <a href="https://github.com/orgs/ZJU-OmniAI/repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/links/repos-dark.svg"><img alt="All Repositories" src="assets/links/repos-light.svg" height="28"></picture></a>&nbsp;
 <a href="https://huggingface.co/OmniAI-ZJU"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/links/huggingface-dark.svg"><img alt="Hugging Face" src="assets/links/huggingface-light.svg" height="28"></picture></a>&nbsp;
 <a href="#news"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/links/news-dark.svg"><img alt="News" src="assets/links/news-light.svg" height="28"></picture></a>&nbsp;
+<a href="https://github.com/ZJU-OmniAI/.github/blob/main/people/README.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/links/people-dark.svg"><img alt="People" src="assets/links/people-light.svg" height="28"></picture></a>&nbsp;
 <a href="mailto:zhangwenqi@zju.edu.cn"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/links/contact-dark.svg"><img alt="Contact" src="assets/links/contact-light.svg" height="28"></picture></a>
 </div>
