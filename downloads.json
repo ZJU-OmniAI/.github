@@ -1,17 +1,17 @@
 {
   "groups": {
     "embodied-omni": {
-      "datasets": 108302,
+      "datasets": 108891,
       "models": 79,
-      "total": 108381
+      "total": 108970
     }
   },
   "metric": "downloadsAllTime",
   "projects": {
     "embodied-memory-bench": {
-      "datasets": 81646,
+      "datasets": 82235,
       "models": 0,
-      "total": 81646
+      "total": 82235
     },
     "embodied-navigator": {
       "datasets": 0,
@@ -69,7 +69,7 @@
     "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 371,
     "dataset:XuanyuLiu/Scene-OTC-Bench": 626,
     "dataset:kagakouko/LSI-108K": 4289,
-    "dataset:lzLiang/EmbodiedMemoryBench": 81646,
+    "dataset:lzLiang/EmbodiedMemoryBench": 82235,
     "dataset:tttboy/Veribench-53K": 801,
     "dataset:wx91726/SpatialGen-Bench": 2592,
     "dataset:zwq2018/embodied_reasoner": 26656,
@@ -88,9 +88,9 @@
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 117453,
+    "datasets": 118042,
     "models": 2069,
-    "total": 119522
+    "total": 120111
   },
-  "updatedAt": "2026-11-23T11:17:46+00:00"
+  "updatedAt": "2026-11-23T22:45:18+00:00"
 }
