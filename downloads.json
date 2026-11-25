@@ -1,17 +1,17 @@
 {
   "groups": {
     "embodied-omni": {
-      "datasets": 109396,
+      "datasets": 111362,
       "models": 79,
-      "total": 109475
+      "total": 111441
     }
   },
   "metric": "downloadsAllTime",
   "projects": {
     "embodied-memory-bench": {
-      "datasets": 82491,
+      "datasets": 84303,
       "models": 0,
-      "total": 82491
+      "total": 84303
     },
     "embodied-navigator": {
       "datasets": 0,
@@ -19,9 +19,9 @@
       "total": 79
     },
     "embodied-reasoner": {
-      "datasets": 26905,
+      "datasets": 27059,
       "models": 0,
-      "total": 26905
+      "total": 27059
     },
     "gft": {
       "datasets": 479,
@@ -34,19 +34,19 @@
       "total": 443
     },
     "provise": {
-      "datasets": 2594,
+      "datasets": 2604,
       "models": 0,
-      "total": 2594
+      "total": 2604
     },
     "scene-designer": {
-      "datasets": 636,
+      "datasets": 640,
       "models": 143,
-      "total": 779
+      "total": 783
     },
     "spatial-interactor": {
-      "datasets": 4326,
+      "datasets": 4329,
       "models": 988,
-      "total": 5314
+      "total": 5317
     },
     "verirl": {
       "datasets": 801,
@@ -67,12 +67,12 @@
   "resources": {
     "dataset:OmniAI-ZJU/NuminaMath-Cot-Distillation-100K": 479,
     "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 376,
-    "dataset:XuanyuLiu/Scene-OTC-Bench": 636,
-    "dataset:kagakouko/LSI-108K": 4326,
-    "dataset:lzLiang/EmbodiedMemoryBench": 82491,
+    "dataset:XuanyuLiu/Scene-OTC-Bench": 640,
+    "dataset:kagakouko/LSI-108K": 4329,
+    "dataset:lzLiang/EmbodiedMemoryBench": 84303,
     "dataset:tttboy/Veribench-53K": 801,
-    "dataset:wx91726/SpatialGen-Bench": 2594,
-    "dataset:zwq2018/embodied_reasoner": 26905,
+    "dataset:wx91726/SpatialGen-Bench": 2604,
+    "dataset:zwq2018/embodied_reasoner": 27059,
     "model:Chenbao77/VLA-Rolling": 0,
     "model:OmniAI-ZJU/OMNEX-VL": 67,
     "model:UnderTides/Embodied-Navigator-7B-GRPO": 79,
@@ -88,9 +88,9 @@
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 118608,
+    "datasets": 120591,
     "models": 2079,
-    "total": 120687
+    "total": 122670
   },
-  "updatedAt": "2026-11-25T11:43:46+00:00"
+  "updatedAt": "2026-11-25T20:41:29+00:00"
 }
