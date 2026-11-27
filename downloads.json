@@ -1,17 +1,17 @@
 {
   "groups": {
     "embodied-omni": {
-      "datasets": 111362,
+      "datasets": 116347,
       "models": 79,
-      "total": 111441
+      "total": 116426
     }
   },
   "metric": "downloadsAllTime",
   "projects": {
     "embodied-memory-bench": {
-      "datasets": 84303,
+      "datasets": 88697,
       "models": 0,
-      "total": 84303
+      "total": 88697
     },
     "embodied-navigator": {
       "datasets": 0,
@@ -19,9 +19,9 @@
       "total": 79
     },
     "embodied-reasoner": {
-      "datasets": 27059,
+      "datasets": 27650,
       "models": 0,
-      "total": 27059
+      "total": 27650
     },
     "gft": {
       "datasets": 483,
@@ -69,10 +69,10 @@
     "dataset:OmniAI-ZJU/OMNEX-VL-DATA": 376,
     "dataset:XuanyuLiu/Scene-OTC-Bench": 643,
     "dataset:kagakouko/LSI-108K": 4345,
-    "dataset:lzLiang/EmbodiedMemoryBench": 84303,
+    "dataset:lzLiang/EmbodiedMemoryBench": 88697,
     "dataset:tttboy/Veribench-53K": 803,
     "dataset:wx91726/SpatialGen-Bench": 2755,
-    "dataset:zwq2018/embodied_reasoner": 27059,
+    "dataset:zwq2018/embodied_reasoner": 27650,
     "model:Chenbao77/VLA-Rolling": 0,
     "model:OmniAI-ZJU/OMNEX-VL": 67,
     "model:UnderTides/Embodied-Navigator-7B-GRPO": 79,
@@ -88,9 +88,9 @@
   },
   "schemaVersion": 1,
   "team": {
-    "datasets": 120767,
+    "datasets": 125752,
     "models": 2092,
-    "total": 122859
+    "total": 127844
   },
-  "updatedAt": "2026-11-27T13:50:22+00:00"
+  "updatedAt": "2026-11-27T22:26:05+00:00"
 }
